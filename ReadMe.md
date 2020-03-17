@@ -74,8 +74,14 @@
 - [机器学习该怎么入门？](https://www.zhihu.com/question/20691338) 
 
 - [如何系统入门机器学习？](https://www.zhihu.com/question/266127835)
+- [机器学习该怎么入门？](https://www.zhihu.com/question/20691338)
 ### 3.1.2 公开课
-#### 网易
+
+- **加州理工学院**[**Learning from data(费曼奖得主Yaser Abu-Mostafa教授)**](http://work.caltech.edu/lectures.html)
+- **谷歌** [Google 制作的节奏紧凑、内容实用的机器学习简介课程](https://developers.google.com/machine-learning/crash-course/)
+- **林軒田**[[機器學習基石]Machine Learning Foundations——哔哩哔哩](https://www.bilibili.com/video/av1624332?p=2)
+
+**网易**
 [![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638411-58eacf64-dcf5-4332-945b-f793f45b4f70.png#align=left&display=inline&height=249&originHeight=250&originWidth=450&size=0&status=done&style=none&width=449)](https://study.163.com/course/introduction/1004570029.htm)
 [吴恩达机器学习](https://study.163.com/course/introduction/1004570029.htm)
 网易杭州研究院
@@ -103,17 +109,16 @@ Google Brain 和百度大脑的发起人、Coursera 创始人吴恩达（Andrew 
 网易云课堂IT互联网
 机器学习的下一步是什么？机器能不能知道“我不知道”、“我为什么知道”，机器的错觉，终身学习
 [查看详情](https://study.163.com/course/introduction/1209400866.htm)
-
-#### 加州理工学院
-[**Learning from data(费曼奖得主Yaser Abu-Mostafa教授)**](http://work.caltech.edu/lectures.html)
-#### 谷歌 
-[Google 制作的节奏紧凑、内容实用的机器学习简介课程](https://developers.google.com/machine-learning/crash-course/)
-#### 林軒田
-
-- [[機器學習基石]Machine Learning Foundations——哔哩哔哩](https://www.bilibili.com/video/av1624332?p=2)
 ### 3.1.3 学习资源
-**1.【知乎】**[**吴恩达机器学习笔记整理**](https://zhuanlan.zhihu.com/p/75173557)
+**书**
 
+- [周志华《机器学习》公式推导在线阅读](https://datawhalechina.github.io/pumpkin-book/#/)
+
+**知乎**
+
+- [机器学习科研的十年](https://zhuanlan.zhihu.com/p/74249758)
+- [机器学习最好的课程是什么？](https://www.zhihu.com/question/37031588/answer/723461499)
+- [**吴恩达机器学习笔记整理**](https://zhuanlan.zhihu.com/p/75173557)
 - **第一周**[单变量线性回归和损失函数、梯度下降的概念](https://zhuanlan.zhihu.com/p/73363177)
 - **第二周**[多变量线性回归和特征缩放、学习率](https://zhuanlan.zhihu.com/p/73403012)
 - **第三周**[分类问题逻辑回归和过拟合、正则化](https://zhuanlan.zhihu.com/p/73404297)
@@ -124,25 +129,54 @@ Google Brain 和百度大脑的发起人、Coursera 创始人吴恩达（Andrew 
 - **第八周**[聚类K-Means算法、降维和主成分分析](https://zhuanlan.zhihu.com/p/74902766)
 - **第九周**[异常检测和高斯分布、推荐系统和协同过滤](https://zhuanlan.zhihu.com/p/75036754)
 - **第十周**[大规模机器学习和随机梯度下降算法](https://zhuanlan.zhihu.com/p/75171589)
+- [【机器学习理论】—mAP 查全率 查准率 IoU ROC PR曲线 F1值](https://zhuanlan.zhihu.com/p/92495276)
+- [SVM教程：支持向量机的直观理解](https://zhuanlan.zhihu.com/p/40857202)
+- [支持向量机(SVM)是什么意思？](https://www.zhihu.com/question/21094489/answer/86273196)
 
-2.【知乎】[【机器学习理论】—mAP 查全率 查准率 IoU ROC PR曲线 F1值](https://zhuanlan.zhihu.com/p/92495276)
-3.【github】[Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials)
-4.【github】[李航《统计学习方法》——代码实现](https://github.com/fengdu78/lihang-code)
+**Github**
+
+- [Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials)
+- [李航《统计学习方法》——代码实现](https://github.com/fengdu78/lihang-code)
 
 ### 3.1.4 竞赛平台
-[Kaggle](https://www.kaggle.com/competitions)
-[阿里天池](https://tianchi.aliyun.com/home?spm=5176.12281949.0.0.493e2448ifo8Vz)
-[Kesci 和鲸社区](https://www.kesci.com/)
-[百度AI Studio](https://aistudio.baidu.com/aistudio/competition)
+
+- [Kaggle](https://www.kaggle.com/competitions)
+- [阿里天池](https://tianchi.aliyun.com/home?spm=5176.12281949.0.0.493e2448ifo8Vz)
+- [Kesci 和鲸社区](https://www.kesci.com/)
+- [百度AI Studio](https://aistudio.baidu.com/aistudio/competition)
 
 ## 3.2 深度学习
 ### 3.2.1 入门概念
 
-- [深度学习如何入门？](https://www.zhihu.com/question/26006703) 
-
+- [深度学习如何入门？](https://www.zhihu.com/question/26006703/answer/129209540)
 - [有哪些优秀的深度学习入门书籍？需要先学习机器学习吗？](https://www.zhihu.com/question/36675272)
+- [CNN（卷积神经网络）是什么？有何入门简介或文章吗？](https://www.zhihu.com/question/52668301)
+- [从应用的角度来看，深度学习怎样快速入门？](https://www.zhihu.com/question/343407265/answer/830912894)
+- [普通程序员如何正确学习人工智能方向的知识？](https://www.zhihu.com/question/51039416)
+- [有哪些优秀的深度学习入门书籍？需要先学习机器学习吗？](https://www.zhihu.com/question/36675272/answer/603847513)
+- [给妹纸的深度学习教学(0)——从这里出发](https://zhuanlan.zhihu.com/p/28462089)
 ### 3.2.2 视频公开课
-#### 网易
+**斯坦福**
+
+- [斯坦福2017季CS224n深度学习自然语言处理课程](https://www.bilibili.com/video/av13383754/?from=search&seid=13189649321373413789)
+- [斯坦福大学公开课 ：机器学习课程-吴恩达](http://open.163.com/special/opencourse/machinelearning.html)
+
+**Coursera**
+
+- [Machine Learning | Coursera](https://www.coursera.org/learn/machine-learning)
+
+**李宏毅**
+官方主页：[Hung-yi Lee](http://speech.ee.ntu.edu.tw/~tlkagk/talk.html)
+
+- **YouTube Channel teaching Deep Learning and Machine Learning** ([link](https://www.youtube.com/channel/UC2ggjtuuWvxrHHHiaDH1dlQ/playlists))
+- [李宏毅深度学习(2016)—哔哩哔哩](https://www.bilibili.com/video/av9770190/?from=search&seid=17240241049019116161)
+- [李宏毅深度学习(2017)—哔哩哔哩](https://www.bilibili.com/video/av9770302/?from=search&seid=9981051227372686627)
+- **Tutorial for Generative Adversarial Network (GAN)**([slideshare](https://www.slideshare.net/tw_dsconf/ss-78795326),[pdf](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_GAN.pdf),[ppt](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_GAN.pptx))
+- **Tutorial for General Deep Learning Technology**([slideshare](http://www.slideshare.net/tw_dsconf/ss-62245351),[pdf](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_Deep.pdf),[ppt](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_Deep.pptx))
+
+
+
+**网易**
 [![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638470-4e56d68d-99dc-4161-847f-6f5910276660.png#align=left&display=inline&height=249&originHeight=250&originWidth=450&size=0&status=done&style=none&width=449)](https://study.163.com/course/introduction/1003842018.htm)
 [Hinton机器学习与神经网络中文课](https://study.163.com/course/introduction/1003842018.htm)
 AI研习社
@@ -160,24 +194,9 @@ AI研习社
 [MIT6.S094深度学习与自动驾驶](https://study.163.com/course/introduction/1004938039.htm)
 大数据文摘
 由麻省理工大学（MIT）推出的自动驾驶课程 6.S094 ，主要讲述自动驾驶技术，提供在线项目的实践环境，可直接修改官方网站代码，...
-[查看详情](https://study.163.com/course/introduction/1004938039.htm)
-#### 斯坦福
-[斯坦福2017季CS224n深度学习自然语言处理课程](https://www.bilibili.com/video/av13383754/?from=search&seid=13189649321373413789)
-[斯坦福大学公开课 ：机器学习课程-吴恩达](http://open.163.com/special/opencourse/machinelearning.html)
-#### coursera
-[Machine Learning | Coursera](https://www.coursera.org/learn/machine-learning)
-#### 李宏毅
-官方主页：[Hung-yi Lee](http://speech.ee.ntu.edu.tw/~tlkagk/talk.html)
-**YouTube Channel teaching Deep Learning and Machine Learning** ([link](https://www.youtube.com/channel/UC2ggjtuuWvxrHHHiaDH1dlQ/playlists))
-
-- [李宏毅深度学习(2016)—哔哩哔哩](https://www.bilibili.com/video/av9770190/?from=search&seid=17240241049019116161)
-
-- [李宏毅深度学习(2017)—哔哩哔哩](https://www.bilibili.com/video/av9770302/?from=search&seid=9981051227372686627)
-
-**Tutorial for Generative Adversarial Network (GAN)**([slideshare](https://www.slideshare.net/tw_dsconf/ss-78795326),[pdf](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_GAN.pdf),[ppt](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_GAN.pptx))
-**Tutorial for General Deep Learning Technology**([slideshare](http://www.slideshare.net/tw_dsconf/ss-62245351),[pdf](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_Deep.pdf),[ppt](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_Deep.pptx))
+[查看详情](https://study.163.com/course/introduction/1004938039.htm)**
 ### 3.2.3 学习资源
-#### 书&理论
+#### 书&论文
 1.[《Dive Into DeepLearning》动手学深度学习](http://zh.d2l.ai/)    **墙裂推荐**
 
 - ** [Pytorch版](http://tangshusen.me/Dive-into-DL-PyTorch/#/)     **
@@ -191,10 +210,26 @@ AI研习社
 
 
 4.目标检测相关论文【github】[deep_learning_object_detection](https://github.com/hoya012/deep_learning_object_detection)
+#### 
+#### 卷积神经网络CNN
+
+- [能否对卷积神经网络工作原理做一个直观的解释？](https://www.zhihu.com/question/39022858)
+- [CNN 入门讲解专栏阅读顺序以及论文研读视频集合](https://zhuanlan.zhihu.com/p/33855959)
+- [CNN系列模型发展简述（附github代码——已全部跑通）](https://zhuanlan.zhihu.com/p/66215918)
+- [干货 | 目标检测入门，看这篇就够了（已更完）](https://zhuanlan.zhihu.com/p/34142321)
+- [详解反向传播算法(上)](https://zhuanlan.zhihu.com/p/25081671)
+
+#### 目标检测
+【知乎】
+
+- [基于深度学习的目标检测算法综述（一）](https://zhuanlan.zhihu.com/p/40047760)
+- [基于深度学习的目标检测算法综述（二）](https://zhuanlan.zhihu.com/p/40020809)
+- [基于深度学习的目标检测算法综述（三）](https://zhuanlan.zhihu.com/p/40102001)
+- [干货 | 目标检测入门，看这篇就够了（已更完）](https://zhuanlan.zhihu.com/p/34142321)
+- [51 个深度学习目标检测模型汇总，论文、源码一应俱全！](https://zhuanlan.zhihu.com/p/55519131)
 
 #### 代码实战
 1.【github】[TensorFlow2.0-Examples](https://github.com/YunYang1994/TensorFlow2.0-Examples)
-
 
 ### 3.2.4  开源工具
 #### 深度学习框架
@@ -238,6 +273,7 @@ AI研习社
 
 
 ### 3.3.2 公开课
+**网易**
 [![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638420-b9906c7a-0da2-4c2f-abc2-7b2574909033.png#align=left&display=inline&height=249&originHeight=250&originWidth=450&size=0&status=done&style=none&width=449)](https://study.163.com/course/introduction/1003223001.htm)
 [CS231n计算机视觉课程](https://study.163.com/course/introduction/1003223001.htm)
 大数据文摘
@@ -245,16 +281,16 @@ AI研习社
 [查看详情](https://study.163.com/course/introduction/1003223001.htm)
 
 ### 3.3.3 学习资源
-#### 书&理论
-1.OpenCV官网
-[https://opencv.org/](https://opencv.org/)
-2.【github】OpenCV官方Demo
-[https://github.com/opencv/opencv/tree/master/samples/cpp](https://github.com/opencv/opencv/tree/master/samples/cpp)
-3.学习网站
-[https://www.learnopencv.com/](https://www.learnopencv.com/)
-#### 代码实战
-[【CV实战】OpenCV—Hello world代码示例](https://zhuanlan.zhihu.com/p/58028543)
-[【CV实战】Ubuntu18.04源码编译安装opencv-3.4.X+测试demo](https://zhuanlan.zhihu.com/p/93356275)
+**理论**
+
+- OpenCV官网 [https://opencv.org/](https://opencv.org/)
+- 学习网站 [https://www.learnopencv.com/](https://www.learnopencv.com/)
+
+**代码实战**
+
+- 【github】[OpenCV官方Demo](https://github.com/opencv/opencv/tree/master/samples/cpp)
+- [【CV实战】OpenCV—Hello world代码示例](https://zhuanlan.zhihu.com/p/58028543)
+- [【CV实战】Ubuntu18.04源码编译安装opencv-3.4.X+测试demo](https://zhuanlan.zhihu.com/p/93356275)
 
 
 ---
