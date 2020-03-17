@@ -1,0 +1,17 @@
+/ImageClassification/dataset/
+/ImageClassification/dataset/
+/ImageClassification/dataset/
+/ImageClassification/paper/*.pdf
+/ImageClassification/resource/logs/*
+/ImageClassification/weight/*.h5
+
+*.h5
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
