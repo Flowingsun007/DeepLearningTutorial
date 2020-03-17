@@ -6,7 +6,7 @@
 
 **↓↓↓**
 
-是不是刚刚入门DL，CV，CNN？或者了解各种理论后仍不知从何下手 ？是不是对于各个网络模型的代码实现一脸懵逼？如果是，那么这个项目就是为你准备的。**Talk is cheap,show me the code!本项目致力于图像分类网络(经典CNN)、目标检测、实例分割等一切CV相关领域的论文/网络原理解读 + 代码构建 + 模型训练**(在1.和2.部分)；在3.学习资源部分里也会有深度学习，计算机视觉相关的入门文章、视频公开课、开源框架、项目和平台等和一切深度学习相关的优秀资源，好东西要共享，Ideas worth spreading～<br />**项目会不定期保持更新。Deep Learning,Leaning deep,Have fun!**<br />**<br />**目录如下：**
+刚刚入门DL，CV，CNN？或者了解各种理论后仍不知从何下手 ？是不是对于各个网络模型的代码实现一脸懵逼？如果是，那么这个项目就是为你准备的。**Talk is cheap,show me the code!本项目致力于图像分类网络(经典CNN)、目标检测、实例分割等一切CV相关领域的论文/网络解读 + 代码构建 + 模型训练**(在1.和2.部分)；在第3.学习资源部分里分享深度学习，计算机视觉相关的文章、视频公开课、开源框架、项目和平台等和一切深度学习相关的优秀资源；第4部分是tensorflow和pytorch上的公开数据集<br />好东西要共享，Ideas worth spreading！项目不定期更新。**Deep Learning,Leaning deep,Have fun!**<br />**<br />**目录如下：**
 
 - [1.Image Classification](#1.Image%20Classification)
 - [2.Object Detection](#2.Object%20Detection)
@@ -18,15 +18,15 @@
 # 1.Image Classification
 | 项目 | 论文 | 网络 | 模型训练 |
 | --- | --- | --- | --- |
-| **LeNet** | [1998](https://ieeexplore.ieee.org/document/726791?reload=true&arnumber=726791) |  |  |
-| **AlexNet** | [2012-PDF](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) |  |  |
-| **Network in Network** | [2013-PDF](http://arxiv.org/pdf/1312.4400) |  |  |
-| **VGG** | [2014-PDF](https://arxiv.org/pdf/1409.1556.pdf) |  |  |
-| **GoogLeNet** | [2014-PDF](https://arxiv.org/pdf/1409.4842) |  |  |
-| **ResNet** | [2015-PDF](https://arxiv.org/pdf/1512.03385.pdf) |  |  |
-| **DenseNet** | [2016-PDF](https://arxiv.org/pdf/1608.06993.pdf) |  |  |
-| **ShuffleNet** | [arXiV'17](https://arxiv.org/abs/1707.01083) | x | x |
-| **MobileNetV3** | [V1](https://arxiv.org/abs/1704.04861)  [V2](https://128.84.21.199/pdf/1801.04381.pdf)  [V3](https://arxiv.org/pdf/1905.02244.pdf) |  |  |
+| **LeNet** | [1998](https://ieeexplore.ieee.org/document/726791?reload=true&arnumber=726791)        | [LeNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/LeNet.py) | [train_lenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_lenet.py) |
+| **AlexNet** | [2012-PDF](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/107660669) | [AlexNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/AlexNet.py) | [train_alexnet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_alexnet.py) |
+| **Network in Network** | [2013-PDF](http://arxiv.org/pdf/1312.4400)    [论文解读](https://zhuanlan.zhihu.com/p/108235295) | [NetworkInNetwork.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/NetworkInNetwork.py) | [train_nin.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_nin.py) |
+| **VGG** | [2014-PDF](https://arxiv.org/pdf/1409.1556.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/107884876) | [VGG.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/VGG.py) | [train_vgg.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_vgg.py) |
+| **GoogLeNet** | [2014-PDF](https://arxiv.org/pdf/1409.4842)    [论文解读](https://zhuanlan.zhihu.com/p/108414921) | [GoogLeNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/GoogLenet.py) | [train_googlenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_googlenet.py) |
+| **ResNet** | [2015-PDF](https://arxiv.org/pdf/1512.03385.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/108708768) | [ResNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/ResNet.py) | [train_resnet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_resnet.py) |
+| **DenseNet** | [2016-PDF](https://arxiv.org/pdf/1608.06993.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/109269085) | [DenseNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/DenseNet.py) | [train_densenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_densenet.py) |
+| **ShuffleNet** | [arXiV'17](https://arxiv.org/abs/1707.01083)      | x | x |
+| **MobileNetV3** | [V1](https://arxiv.org/abs/1704.04861)  [V2](https://128.84.21.199/pdf/1801.04381.pdf)  [V3](https://arxiv.org/pdf/1905.02244.pdf) | [MobileNetV3.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/MobileNetV3.py) | [train_mobilenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_mobilenet.py) |
 
 
 ---
@@ -39,11 +39,12 @@
 | **YoloV2**<br /> | [CVPR'17](https://arxiv.org/pdf/1612.08242.pdf) | x | [官方-darknet](https://pjreddie.com/darknet/yolo/) |
 | **YoloV3** | [arXiV'18](https://pjreddie.com/media/files/papers/YOLOv3.pdf) | x | [官方-darknet](https://pjreddie.com/darknet/yolo/)    [tensorflow](https://github.com/mystic123/tensorflow-yolo-v3)  [pytorch](https://github.com/eriklindernoren/PyTorch-YOLOv3) |
 | **SSD** | [ECCV'16](https://arxiv.org/pdf/1512.02325.pdf) | x | [官方-caffe](https://github.com/weiliu89/caffe/tree/ssd)  [tensorflow](https://github.com/balancap/SSD-Tensorflow)  [pytorch](https://github.com/amdegroot/ssd.pytorch) |
-| **RefineDet** | [CVPR'18](http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Single-Shot_Refinement_Neural_CVPR_2018_paper.pdf) |  | [官方-caffe](https://github.com/sfzhang15/RefineDet)    [pytroch](https://github.com/lzx1413/PytorchSSD) |
-| **RetinaNet** | [ICCV'17](https://arxiv.org/pdf/1708.02002.pdf) |  | [官方-keras](https://github.com/fizyr/keras-retinanet) |
-| **NAS-FPN** | [CVPR'19](https://arxiv.org/pdf/1904.07392.pdf) |  |  |
-| **EfficientDet** | [arXiV'19](https://arxiv.org/pdf/1911.09070v1.pdf) |  |  |
+| **RefineDet** | [CVPR'18](http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Single-Shot_Refinement_Neural_CVPR_2018_paper.pdf) | x | [官方-caffe](https://github.com/sfzhang15/RefineDet)    [pytroch](https://github.com/lzx1413/PytorchSSD) |
+| **RetinaNet** | [ICCV'17](https://arxiv.org/pdf/1708.02002.pdf) | x | [官方-keras](https://github.com/fizyr/keras-retinanet) |
+| **NAS-FPN** | [CVPR'19](https://arxiv.org/pdf/1904.07392.pdf) | x | x |
+| **EfficientDet** | [arXiV'19](https://arxiv.org/pdf/1911.09070v1.pdf) | x | x |
 
+## 
 ## 2.2 Two-stage
 | 项目 | 论文 | 网络 | 模型训练 |
 | --- | --- | --- | --- |
@@ -51,8 +52,8 @@
 | **Fast R-CNN** | [ICCV'15](https://arxiv.org/pdf/1504.08083.pdf) | x | [caffe](https://github.com/rbgirshick/fast-rcnn) |
 | **Faster R-CNN** | [NIPS'15](https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf) | x | [官方-caffe](https://github.com/rbgirshick/py-faster-rcnn)   [tensorflow](https://github.com/endernewton/tf-faster-rcnn)   [pytorch](https://github.com/jwyang/faster-rcnn.pytorch) |
 | **Mask R-CNN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf) | x | [官方-caffe2](https://github.com/facebookresearch/Detectron)   [tf](https://github.com/matterport/Mask_RCNN)   [tf](https://github.com/CharlesShang/FastMaskRCNN)   [pytorch](https://github.com/multimodallearning/pytorch-mask-rcnn) |
-| **DCN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/Dai_Deformable_Convolutional_Networks_ICCV_2017_paper.pdf) |  | [官方-mxnet](https://github.com/msracver/Deformable-ConvNets)  [tensorflow](https://github.com/Zardinality/TF_Deformable_Net)  [pytorch](https://github.com/oeway/pytorch-deform-conv) |
-| **ThunderNet** | [ICCV'19](https://arxiv.org/pdf/1903.11752.pdf) |  |  |
+| **DCN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/Dai_Deformable_Convolutional_Networks_ICCV_2017_paper.pdf) | x | [官方-mxnet](https://github.com/msracver/Deformable-ConvNets)  [tensorflow](https://github.com/Zardinality/TF_Deformable_Net)  [pytorch](https://github.com/oeway/pytorch-deform-conv) |
+| **ThunderNet** | [ICCV'19](https://arxiv.org/pdf/1903.11752.pdf) | x | x |
 
 ## 2.3 Other
 | 项目 | 论文 | 网络 | 模型训练 |
@@ -135,7 +136,14 @@
 - [有哪些优秀的深度学习入门书籍？需要先学习机器学习吗？](https://www.zhihu.com/question/36675272/answer/603847513)
 - [给妹纸的深度学习教学(0)——从这里出发](https://zhuanlan.zhihu.com/p/28462089)
 ### 3.2.2 视频公开课
-**斯坦福**
+**3Blue1Brown**
+
+- [【S301】But what is a Neural Network 什么是神经网络？](https://zhuanlan.zhihu.com/p/104263315)
+- [【S302】Gradient descent, how neural networks learn 梯度下降，神经网络如何学习](https://zhuanlan.zhihu.com/p/104263315)
+- [【S303】What is backpropagation really doing 反向传播是如何起作用的](https://zhuanlan.zhihu.com/p/104263315)
+- [【S304】Backpropagation calculus 反向传播公式推导](https://zhuanlan.zhihu.com/p/104263315)[<br />](https://zhuanlan.zhihu.com/p/104263315)
+
+**<br />**斯坦福**
 
 - [斯坦福2017季CS224n深度学习自然语言处理课程](https://www.bilibili.com/video/av13383754/?from=search&seid=13189649321373413789)
 - [斯坦福大学公开课 ：机器学习课程-吴恩达](http://open.163.com/special/opencourse/machinelearning.html)
@@ -160,25 +168,29 @@
 [![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638491-6011a7b5-75ec-4c8b-be46-d3818f7b94ce.png#align=left&display=inline&height=249&originHeight=250&originWidth=450&size=0&status=done&style=none&width=449)](https://study.163.com/course/introduction/1004938039.htm)<br />[MIT6.S094深度学习与自动驾驶](https://study.163.com/course/introduction/1004938039.htm)<br />大数据文摘<br />由麻省理工大学（MIT）推出的自动驾驶课程 6.S094 ，主要讲述自动驾驶技术，提供在线项目的实践环境，可直接修改官方网站代码，...[查看详情](https://study.163.com/course/introduction/1004938039.htm)
 
 ### 3.2.3 学习资源
-#### 书&论文
-1.[《Dive Into DeepLearning》动手学深度学习](http://zh.d2l.ai/)    ** [Pytorch版](http://tangshusen.me/Dive-into-DL-PyTorch/#/)      **[**Tensorflow2.0版**](https://trickygo.github.io/Dive-into-DL-TensorFlow2.0/#/)<br />2.麻省理工学院出版社《[Deep Learning](http://www.deeplearningbook.org/)》    
+#### 书
+[《Dive Into DeepLearning》动手学深度学习](http://zh.d2l.ai/)    ** [Pytorch版](http://tangshusen.me/Dive-into-DL-PyTorch/#/)      **[**Tensorflow2.0版**](https://trickygo.github.io/Dive-into-DL-TensorFlow2.0/#/)<br />麻省理工学院出版社《[Deep Learning](http://www.deeplearningbook.org/)》    
 > 中文版：[exacity/deeplearningbook-chinese](https://github.com/exacity/deeplearningbook-chinese)
 
-3.《[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)》
+《[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)》
 > 中文版：[https://tigerneil.gitbooks.io/neural-networks-and-deep-learning-zh/content/](https://tigerneil.gitbooks.io/neural-networks-and-deep-learning-zh/content/)<br />
 
-4.【github】目标检测相关论文[deep_learning_object_detection](https://github.com/hoya012/deep_learning_object_detection)
-#### 
-#### 卷积神经网络CNN
 
+#### 卷积神经网络CNN
 - [能否对卷积神经网络工作原理做一个直观的解释？](https://www.zhihu.com/question/39022858)
 - [CNN 入门讲解专栏阅读顺序以及论文研读视频集合](https://zhuanlan.zhihu.com/p/33855959)
 - [CNN系列模型发展简述（附github代码——已全部跑通）](https://zhuanlan.zhihu.com/p/66215918)
 - [干货 | 目标检测入门，看这篇就够了（已更完）](https://zhuanlan.zhihu.com/p/34142321)
 - [详解反向传播算法(上)](https://zhuanlan.zhihu.com/p/25081671)
+- [【论文解读】CNN深度卷积神经网络-AlexNet](https://zhuanlan.zhihu.com/p/107660669)
+- [【论文解读】CNN深度卷积神经网络-VGG](https://zhuanlan.zhihu.com/p/107884876)
+- [【论文解读】CNN深度卷积神经网络-Network in Network](https://zhuanlan.zhihu.com/p/108235295)
+- [【论文解读】CNN深度卷积神经网络-GoogLeNet](https://zhuanlan.zhihu.com/p/108414921)
+- [【论文解读】CNN深度卷积神经网络-ResNet](https://zhuanlan.zhihu.com/p/108708768)
+- [【论文解读】CNN深度卷积神经网络-DenseNet](https://zhuanlan.zhihu.com/p/109269085)
 
 #### 目标检测
-**【知乎】**
+**知乎**
 
 - [基于深度学习的目标检测算法综述（一）](https://zhuanlan.zhihu.com/p/40047760)
 - [基于深度学习的目标检测算法综述（二）](https://zhuanlan.zhihu.com/p/40020809)
@@ -186,9 +198,15 @@
 - [干货 | 目标检测入门，看这篇就够了（已更完）](https://zhuanlan.zhihu.com/p/34142321)
 - [51 个深度学习目标检测模型汇总，论文、源码一应俱全！](https://zhuanlan.zhihu.com/p/55519131)
 
+**github**
+
+- 目标检测相关论文[deep_learning_object_detection](https://github.com/hoya012/deep_learning_object_detection)
+
 #### 代码实战
 
 - 【github】[TensorFlow2.0-Examples](https://github.com/YunYang1994/TensorFlow2.0-Examples)
+- [【目标检测实战】Darknet—yolov3模型训练（VOC数据集)](https://zhuanlan.zhihu.com/p/92141879)
+- [【目标检测实战】Pytorch—SSD模型训练（VOC数据集）](https://zhuanlan.zhihu.com/p/92154612)
 
 ### 3.2.4  开源工具
 #### 深度学习框架

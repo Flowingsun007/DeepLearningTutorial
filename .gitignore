@@ -1,11 +1,8 @@
-/ImageClassification/dataset/
-/ImageClassification/dataset/
-/ImageClassification/dataset/
-/ImageClassification/paper/*.pdf
+/ImageClassification/dataset/*
 /ImageClassification/resource/logs/*
-/ImageClassification/weight/*.h5
 
 *.h5
+*.pdf
 
 ### IntelliJ IDEA ###
 .idea
