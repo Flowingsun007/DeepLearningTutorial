@@ -1,4 +1,3 @@
-/ImageClassification/dataset/*
 /ImageClassification/resource/logs/*
 
 *.h5
