@@ -4,9 +4,11 @@
 # 介绍
 如果你是深度学习/卷积神经网络的初学者，且对图像分类、目标检测、分割等CV相关领域感兴趣，请继续
 
-**↓↓↓**
+**↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓**
 
-刚刚入门DL，CV，CNN？或者了解各种理论后仍不知从何下手 ？是不是对于各个网络模型的代码实现一脸懵逼？如果是，那么这个项目就是为你准备的。**Talk is cheap,show me the code!本项目致力于图像分类网络(经典CNN)、目标检测、实例分割等一切CV相关领域的论文/网络解读 + 代码构建 + 模型训练**(在1.和2.部分)；在第3.学习资源部分里分享深度学习，计算机视觉相关的文章、视频公开课、开源框架、项目和平台等和一切深度学习相关的优秀资源；第4部分是tensorflow和pytorch上的公开数据集<br />好东西要共享，Ideas worth spreading！项目不定期更新。**Deep Learning,Leaning deep,Have fun!**<br />**<br />**目录如下：**
+刚刚入门DL，CV，CNN？或者了解各种理论后仍不知从何下手 ？是不是对于各个网络模型的代码实现一脸懵逼？如果是，那么这个项目就是为你准备的。**Talk is cheap,show me the code!本项目致力于图像分类网络(经典CNN)、目标检测、实例分割等一切CV相关领域的论文/网络解读 + 代码构建 + 模型训练**(在1.和2.部分)；在第3.学习资源部分里分享深度学习，计算机视觉相关的文章、视频公开课、开源框架、项目和平台等和一切**深度学习相关的优秀资源**；第4部分是tensorflow和pytorch上的**公开数据集**<br />好东西要共享，Ideas worth spreading！项目不定期更新。<br />
+
+**目录如下：**
 
 - [1.Image Classification](#1.Image%20Classification)
 - [2.Object Detection](#2.Object%20Detection)
@@ -48,7 +50,7 @@
 ## 2.2 Two-stage
 | 项目 | 论文 | 网络 | 模型训练 |
 | --- | --- | --- | --- |
-| **R-CNN ** | [CVPR'14](https://arxiv.org/pdf/1311.2524.pdf) | x | [官方-caffe](https://github.com/rbgirshick/rcnn) |
+| **R-CNN** | [CVPR'14](https://arxiv.org/pdf/1311.2524.pdf) | x | [官方-caffe](https://github.com/rbgirshick/rcnn) |
 | **Fast R-CNN** | [ICCV'15](https://arxiv.org/pdf/1504.08083.pdf) | x | [caffe](https://github.com/rbgirshick/fast-rcnn) |
 | **Faster R-CNN** | [NIPS'15](https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf) | x | [官方-caffe](https://github.com/rbgirshick/py-faster-rcnn)   [tensorflow](https://github.com/endernewton/tf-faster-rcnn)   [pytorch](https://github.com/jwyang/faster-rcnn.pytorch) |
 | **Mask R-CNN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf) | x | [官方-caffe2](https://github.com/facebookresearch/Detectron)   [tf](https://github.com/matterport/Mask_RCNN)   [tf](https://github.com/CharlesShang/FastMaskRCNN)   [pytorch](https://github.com/multimodallearning/pytorch-mask-rcnn) |
@@ -143,7 +145,7 @@
 - [【S303】What is backpropagation really doing 反向传播是如何起作用的](https://zhuanlan.zhihu.com/p/104263315)
 - [【S304】Backpropagation calculus 反向传播公式推导](https://zhuanlan.zhihu.com/p/104263315)[<br />](https://zhuanlan.zhihu.com/p/104263315)
 
-**<br />**斯坦福**
+**斯坦福**
 
 - [斯坦福2017季CS224n深度学习自然语言处理课程](https://www.bilibili.com/video/av13383754/?from=search&seid=13189649321373413789)
 - [斯坦福大学公开课 ：机器学习课程-吴恩达](http://open.163.com/special/opencourse/machinelearning.html)
@@ -169,7 +171,7 @@
 
 ### 3.2.3 学习资源
 #### 书
-[《Dive Into DeepLearning》动手学深度学习](http://zh.d2l.ai/)    ** [Pytorch版](http://tangshusen.me/Dive-into-DL-PyTorch/#/)      **[**Tensorflow2.0版**](https://trickygo.github.io/Dive-into-DL-TensorFlow2.0/#/)<br />麻省理工学院出版社《[Deep Learning](http://www.deeplearningbook.org/)》    
+[《Dive Into DeepLearning》动手学深度学习](http://zh.d2l.ai/)    [**Pytorch版**](http://tangshusen.me/Dive-into-DL-PyTorch/#/)      [**Tensorflow2.0版**](https://trickygo.github.io/Dive-into-DL-TensorFlow2.0/#/)<br />麻省理工学院出版社《[Deep Learning](http://www.deeplearningbook.org/)》    
 > 中文版：[exacity/deeplearningbook-chinese](https://github.com/exacity/deeplearningbook-chinese)
 
 《[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)》
