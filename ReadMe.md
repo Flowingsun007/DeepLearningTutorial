@@ -42,16 +42,16 @@
 # 1.Image Classification
 | 项目✓ | 论文✓ | 网络✓ | 模型训练✓ |
 | :---: | :---: | :---: | :---: |
-| **LeNet** | [1998](https://ieeexplore.ieee.org/document/726791?reload=true&arnumber=726791)        | [LeNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/LeNet.py) | [train_lenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_lenet.py) |
+| **LeNet** | [1998](https://ieeexplore.ieee.org/document/726791?reload=true&arnumber=726791)            [论文解读](https://zhuanlan.zhihu.com/p/34311419) | [LeNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/LeNet.py) | [train_lenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_lenet.py) |
 | **AlexNet** | [2012-PDF](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/107660669) | [AlexNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/AlexNet.py) | [train_alexnet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_alexnet.py) |
 | **Network in Network** | [2013-PDF](http://arxiv.org/pdf/1312.4400)    [论文解读](https://zhuanlan.zhihu.com/p/108235295) | [NetworkInNetwork.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/NetworkInNetwork.py) | [train_nin.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_nin.py) |
 | **VGG** | [2014-PDF](https://arxiv.org/pdf/1409.1556.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/107884876) | [VGG.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/VGG.py) | [train_vgg.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_vgg.py) |
 | **GoogLeNet** | [2014-PDF](https://arxiv.org/pdf/1409.4842)    [论文解读](https://zhuanlan.zhihu.com/p/108414921) | [GoogLeNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/GoogLenet.py) | [train_googlenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_googlenet.py) |
 | **ResNet** | [2015-PDF](https://arxiv.org/pdf/1512.03385.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/108708768) | [ResNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/ResNet.py) | [train_resnet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_resnet.py) |
 | **DenseNet** | [2016-PDF](https://arxiv.org/pdf/1608.06993.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/109269085) | [DenseNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/DenseNet.py) | [train_densenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_densenet.py) |
-| **ShuffleNet** | [2017-PDF](https://arxiv.org/pdf/1707.01083)      | [shuffleNet.py](https://github.com/xiaohu2015/DeepLearning_tutorials/blob/master/CNNs/ShuffleNet.py) | ✗ |
-| **ShuffleNetV2** | [2018-PDF](https://arxiv.org/pdf/1807.11164) | [ShuffleNetV2.py](https://github.com/xiaohu2015/DeepLearning_tutorials/blob/master/CNNs/shufflenet_v2.py) | ✗ |
-| **MobileNet** | [V1](https://arxiv.org/abs/1704.04861)     [V2](https://128.84.21.199/pdf/1801.04381.pdf)     [V3](https://arxiv.org/pdf/1905.02244.pdf) | [MobileNetV3.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/MobileNetV3.py) | [train_mobilenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_mobilenet.py) |
+| **ShuffleNet** | [2017-PDF](https://arxiv.org/pdf/1707.01083)    [论文解读](https://zhuanlan.zhihu.com/p/32304419) | [shuffleNet.py](https://github.com/xiaohu2015/DeepLearning_tutorials/blob/master/CNNs/ShuffleNet.py) | ✗ |
+| **ShuffleNetV2** | [2018-PDF](https://arxiv.org/pdf/1807.11164)    [论文解读](https://zhuanlan.zhihu.com/p/48261931) | [ShuffleNetV2.py](https://github.com/xiaohu2015/DeepLearning_tutorials/blob/master/CNNs/shufflenet_v2.py) | ✗ |
+| **MobileNet** | [V1](https://arxiv.org/abs/1704.04861)   [V2](https://128.84.21.199/pdf/1801.04381.pdf)   [V3](https://arxiv.org/pdf/1905.02244.pdf)  [论文解读](https://zhuanlan.zhihu.com/p/70703846) | [MobileNetV3.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/MobileNetV3.py) | [train_mobilenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_mobilenet.py) |
 
 
 ---
@@ -60,25 +60,23 @@
 ## 2.1 One-stage
 | 项目 | 论文 | 网络 | 模型训练 |
 | :---: | :---: | :---: | :---: |
-| **YoloV1** | [CVPR'16](http://arxiv.org/abs/1506.02640) | ☐ | [官方-darknet](https://pjreddie.com/darknet/yolov1/)    [tensorflow](https://github.com/gliese581gg/YOLO_tensorflow) |
-| **SSD** | [ECCV'16](http://arxiv.org/abs/1512.02325) | ☐ | [官方-caffe](https://github.com/weiliu89/caffe/tree/ssd)  [tensorflow](https://github.com/balancap/SSD-Tensorflow)  [pytorch](https://github.com/amdegroot/ssd.pytorch) |
-| **RetinaNet** | [ICCV'17](https://arxiv.org/pdf/1708.02002.pdf) | ☐ | [官方-keras](https://github.com/fizyr/keras-retinanet) |
-| **YoloV2** | [CVPR'17](https://arxiv.org/pdf/1612.08242.pdf) | ☐ | [官方-darknet](https://pjreddie.com/darknet/yolov2/)    [tf](https://github.com/hizhangp/yolo_tensorflow)    [tf](https://github.com/KOD-Chen/YOLOv2-Tensorflow)   [pytorch](https://github.com/longcw/yolo2-pytorch) |
-| **YoloV3** | [arXiV'18](https://arxiv.org/abs/1804.02767) | ☐ | [官方-darknet](https://github.com/pjreddie/darknet)    [tf](https://github.com/mystic123/tensorflow-yolo-v3)    [tf2.0](https://github.com/YunYang1994/TensorFlow2.0-Examples/tree/master/4-Object_Detection/YOLOV3)    [pytorch](https://github.com/eriklindernoren/PyTorch-YOLOv3) |
-| **RefineDet** | [CVPR'18](https://arxiv.org/abs/1711.06897) | ☐ | [官方-caffe](https://github.com/sfzhang15/RefineDet)    [pytroch](https://github.com/lzx1413/PytorchSSD) |
-| **NAS-FPN** | [CVPR'19](https://arxiv.org/abs/1904.07392) | ☐ | ☐ |
-| **EfficientNet** | [arXiV'19](https://arxiv.org/pdf/1911.09070v1.pdf) | ☐ | [官方-tensorflow](https://github.com/google/automl/tree/master/efficientdet) |
+| **YoloV1** | [CVPR'16](http://arxiv.org/abs/1506.02640)  [论文解读](https://zhuanlan.zhihu.com/p/32525231) | ☐ | [官方-darknet](https://pjreddie.com/darknet/yolov1/)    [tensorflow](https://github.com/gliese581gg/YOLO_tensorflow) |
+| **SSD** | [ECCV'16](http://arxiv.org/abs/1512.02325)  [论文解读](https://zhuanlan.zhihu.com/p/33544892) | ☐ | [官方-caffe](https://github.com/weiliu89/caffe/tree/ssd)  [tensorflow](https://github.com/balancap/SSD-Tensorflow)  [pytorch](https://github.com/amdegroot/ssd.pytorch) |
+| **YoloV2** | [CVPR'17](https://arxiv.org/pdf/1612.08242.pdf)  [论文解读](https://zhuanlan.zhihu.com/p/35325884) | ☐ | [官方-darknet](https://pjreddie.com/darknet/yolov2/)    [tf](https://github.com/hizhangp/yolo_tensorflow)    [tf](https://github.com/KOD-Chen/YOLOv2-Tensorflow)   [pytorch](https://github.com/longcw/yolo2-pytorch) |
+| **RetinaNet** | [ICCV'17](https://arxiv.org/pdf/1708.02002.pdf)   [论文解读](https://zhuanlan.zhihu.com/p/68786098) | ☐ | [官方-keras](https://github.com/fizyr/keras-retinanet) |
+| **YoloV3** | [arXiV'18](https://arxiv.org/abs/1804.02767)  [论文翻译](https://zhuanlan.zhihu.com/p/37201615) | ☐ | [官方-darknet](https://github.com/pjreddie/darknet)    [tf](https://github.com/mystic123/tensorflow-yolo-v3)    [tf2.0](https://github.com/YunYang1994/TensorFlow2.0-Examples/tree/master/4-Object_Detection/YOLOV3)    [pytorch](https://github.com/eriklindernoren/PyTorch-YOLOv3) |
+| **NAS-FPN** | [CVPR'19](https://arxiv.org/abs/1904.07392)  [论文解读](https://zhuanlan.zhihu.com/p/97230695) | ☐ | ☐ |
+| **EfficientNet** | [arXiV'19](https://arxiv.org/pdf/1911.09070v1.pdf)  [论文解读](https://zhuanlan.zhihu.com/p/104790514) | ☐ | [官方-tensorflow](https://github.com/google/automl/tree/master/efficientdet) |
 
 ## 2.2 Two-stage
 | 项目 | 论文 | 网络 | 模型训练 |
 | :---: | :---: | :---: | :---: |
-| **R-CNN** | [CVPR'14](https://arxiv.org/pdf/1311.2524.pdf) | ☐ | [官方-caffe](https://github.com/rbgirshick/rcnn) |
-| **Fast R-CNN** | [ICCV'15](https://arxiv.org/pdf/1504.08083.pdf) | ☐ | [官方-caffe](https://github.com/rbgirshick/fast-rcnn) [tensorflow](https://github.com/zplizzi/tensorflow-fast-rcnn) |
-| **Faster R-CNN** | [NIPS'15](https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf) | ☐ | [官方-caffe](https://github.com/rbgirshick/py-faster-rcnn)   [tensorflow](https://github.com/endernewton/tf-faster-rcnn)   [pytorch](https://github.com/jwyang/faster-rcnn.pytorch) |
-| **Mask R-CNN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf) | ☐ | [官方-caffe2](https://github.com/facebookresearch/Detectron)   [tf](https://github.com/matterport/Mask_RCNN)   [tf](https://github.com/CharlesShang/FastMaskRCNN)   [pytorch](https://github.com/multimodallearning/pytorch-mask-rcnn) |
-| **DCN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/Dai_Deformable_Convolutional_Networks_ICCV_2017_paper.pdf) | ☐ | [官方-mxnet](https://github.com/msracver/Deformable-ConvNets)  [tensorflow](https://github.com/Zardinality/TF_Deformable_Net)  [pytorch](https://github.com/oeway/pytorch-deform-conv) |
-| **FPN** | [CVPR'17](https://arxiv.org/abs/1612.03144) | ☐ | [caffe](https://github.com/unsky/FPN) |
-| **ThunderNet** | [ICCV'19](https://arxiv.org/pdf/1903.11752.pdf) | ☐ | ☐ |
+| **R-CNN** | [CVPR'14](https://arxiv.org/pdf/1311.2524.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/23006190) | ☐ | [官方-caffe](https://github.com/rbgirshick/rcnn) |
+| **Fast R-CNN** | [ICCV'15](https://arxiv.org/pdf/1504.08083.pdf)     [论文解读](https://zhuanlan.zhihu.com/p/79054417) | ☐ | [官方-caffe](https://github.com/rbgirshick/fast-rcnn) [tensorflow](https://github.com/zplizzi/tensorflow-fast-rcnn) |
+| **Faster R-CNN** | [NIPS'15](https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf)     [论文解读](https://zhuanlan.zhihu.com/p/82185598) | ☐ | [官方-caffe](https://github.com/rbgirshick/py-faster-rcnn)   [tensorflow](https://github.com/endernewton/tf-faster-rcnn)   [pytorch](https://github.com/jwyang/faster-rcnn.pytorch) |
+| **Mask R-CNN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf)  [解读1](https://zhuanlan.zhihu.com/p/37998710)  [解读2](https://zhuanlan.zhihu.com/p/65321082) | ☐ | [官方-caffe2](https://github.com/facebookresearch/Detectron)   [tf](https://github.com/matterport/Mask_RCNN)   [tf](https://github.com/CharlesShang/FastMaskRCNN)   [pytorch](https://github.com/multimodallearning/pytorch-mask-rcnn) |
+| **FPN** | [CVPR'17](https://arxiv.org/abs/1612.03144)   [论文解读](https://zhuanlan.zhihu.com/p/62604038) | ☐ | [caffe](https://github.com/unsky/FPN) |
+| **ThunderNet** | [ICCV'19](https://arxiv.org/pdf/1903.11752.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/61113865) | ☐ | ☐ |
 
 ## 2.3 资源分享
 ### 2.3.1 知乎
