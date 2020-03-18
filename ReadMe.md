@@ -1,46 +1,40 @@
 # 【学习资源】—Github项目说明
 
-**Deep Learning,Leaning deep,Have fun!**
+****Deep Learning,Leaning deep,Have fun!**
 # 介绍
-如果你是深度学习/卷积神经网络的初学者，且对图像分类、目标检测、分割等CV相关领域感兴趣，请继续
+如果你是深度学习/卷积神经网络的初学者，且对图像分类、目标检测、分割等CV相关领域感兴趣，请继续<br />**↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓**<br />刚刚入门DL，CV，CNN？或者了解各种理论后仍不知从何下手 ？是不是对于各个网络模型的代码实现一脸懵逼？如果是，那么这个项目就是为你准备的。**Talk is cheap,show me the code!本项目致力于图像分类网络(经典CNN)、目标检测、实例分割等一切CV相关领域的论文/网络解读 + 代码构建 + 模型训练**(在1.和2.部分)；在第3.学习资源部分里分享深度学习，计算机视觉相关的文章、视频公开课、开源框架、项目和平台等和一切**深度学习相关的优秀资源**；第4部分是tensorflow和pytorch上的**公开数据集**<br />好东西要共享，Ideas worth spreading！项目不定期更新。<br />**目录如下：**
 
-**↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓**
-
-刚刚入门DL，CV，CNN？或者了解各种理论后仍不知从何下手 ？是不是对于各个网络模型的代码实现一脸懵逼？如果是，那么这个项目就是为你准备的。**Talk is cheap,show me the code!本项目致力于图像分类网络(经典CNN)、目标检测、实例分割等一切CV相关领域的论文/网络解读 + 代码构建 + 模型训练**(在1.和2.部分)；在第3.学习资源部分里分享深度学习，计算机视觉相关的文章、视频公开课、开源框架、项目和平台等和一切**深度学习相关的优秀资源**；第4部分是tensorflow和pytorch上的**公开数据集**<br />好东西要共享，Ideas worth spreading！项目不定期更新。<br />
-
-**目录如下：**
-
-- [介绍](#%E4%BB%8B%E7%BB%8D)
-- [1.Image Classification](#1image-classification)
-- [2.Object Detection](#2object-detection)
-  - [2.1 One-stage](#21-one-stage)
-  - [2.2 Two-stage](#22-two-stage)
-  - [2.3 Other](#23-other)
-- [3.学习资源](#3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90)
-  - [3.1 机器学习](#31-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0)
-    - [3.1.1 入门概念](#311-%E5%85%A5%E9%97%A8%E6%A6%82%E5%BF%B5)
-    - [3.1.2 公开课](#312-%E5%85%AC%E5%BC%80%E8%AF%BE)
-    - [3.1.3 学习资源](#313-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90)
-    - [3.1.4 竞赛平台](#314-%E7%AB%9E%E8%B5%9B%E5%B9%B3%E5%8F%B0)
-  - [3.2 深度学习](#32-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0)
-    - [3.2.1 入门概念](#321-%E5%85%A5%E9%97%A8%E6%A6%82%E5%BF%B5)
-    - [3.2.2 视频公开课](#322-%E8%A7%86%E9%A2%91%E5%85%AC%E5%BC%80%E8%AF%BE)
-    - [3.2.3 学习资源](#323-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90)
-      - [书](#%E4%B9%A6)
-      - [卷积神经网络CNN](#%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9CCNN)
-      - [目标检测](#%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B)
-      - [代码实战](#%E4%BB%A3%E7%A0%81%E5%AE%9E%E6%88%98)
+- [介绍](https://github.com/Flowingsun007/DeepLearningTutorial#%E4%BB%8B%E7%BB%8D)
+- [1.Image Classification](https://github.com/Flowingsun007/DeepLearningTutorial#1image-classification)
+- [2.Object Detection](https://github.com/Flowingsun007/DeepLearningTutorial#2object-detection)
+  - [2.1 One-stage](https://github.com/Flowingsun007/DeepLearningTutorial#21-one-stage)
+  - [2.2 Two-stage](https://github.com/Flowingsun007/DeepLearningTutorial#22-two-stage)
+  - [2.3 Other](https://github.com/Flowingsun007/DeepLearningTutorial#23-other)
+- [3.学习资源](https://github.com/Flowingsun007/DeepLearningTutorial#3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90)
+  - [3.1 机器学习](https://github.com/Flowingsun007/DeepLearningTutorial#31-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0)
+    - [3.1.1 入门概念](https://github.com/Flowingsun007/DeepLearningTutorial#311-%E5%85%A5%E9%97%A8%E6%A6%82%E5%BF%B5)
+    - [3.1.2 公开课](https://github.com/Flowingsun007/DeepLearningTutorial#312-%E5%85%AC%E5%BC%80%E8%AF%BE)
+    - [3.1.3 学习资源](https://github.com/Flowingsun007/DeepLearningTutorial#313-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90)
+    - [3.1.4 竞赛平台](https://github.com/Flowingsun007/DeepLearningTutorial#314-%E7%AB%9E%E8%B5%9B%E5%B9%B3%E5%8F%B0)
+  - [3.2 深度学习](https://github.com/Flowingsun007/DeepLearningTutorial#32-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0)
+    - [3.2.1 入门概念](https://github.com/Flowingsun007/DeepLearningTutorial#321-%E5%85%A5%E9%97%A8%E6%A6%82%E5%BF%B5)
+    - [3.2.2 视频公开课](https://github.com/Flowingsun007/DeepLearningTutorial#322-%E8%A7%86%E9%A2%91%E5%85%AC%E5%BC%80%E8%AF%BE)
+    - [3.2.3 学习资源](https://github.com/Flowingsun007/DeepLearningTutorial#323-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90)
+      - [书](https://github.com/Flowingsun007/DeepLearningTutorial#%E4%B9%A6)
+      - [卷积神经网络CNN](https://github.com/Flowingsun007/DeepLearningTutorial#%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9CCNN)
+      - [目标检测](https://github.com/Flowingsun007/DeepLearningTutorial#%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B)
+      - [代码实战](https://github.com/Flowingsun007/DeepLearningTutorial#%E4%BB%A3%E7%A0%81%E5%AE%9E%E6%88%98)
     - [3.2.4  开源工具](https://www.yuque.com/zhaoluyang/ai/vgn4pv#hgkH7)
-      - [深度学习框架](#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6)
-      - [支撑工具](#%E6%94%AF%E6%92%91%E5%B7%A5%E5%85%B7)
-      - [其他资源](#%E5%85%B6%E4%BB%96%E8%B5%84%E6%BA%90)
-  - [3.3 计算机视觉](#33-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89)
-    - [3.3.1 入门概念](#331-%E5%85%A5%E9%97%A8%E6%A6%82%E5%BF%B5)
-    - [3.3.2 公开课](#332-%E5%85%AC%E5%BC%80%E8%AF%BE)
-    - [3.3.3 学习资源](#333-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90)
-- [4.公开数据集](#4%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE%E9%9B%86)
-  - [4.1 Pytorch提供](#41-Pytorch%E6%8F%90%E4%BE%9B)
-  - [4.2 Tensorflow提供](#42-Tensorflow%E6%8F%90%E4%BE%9B)
+      - [深度学习框架](https://github.com/Flowingsun007/DeepLearningTutorial#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6)
+      - [支撑工具](https://github.com/Flowingsun007/DeepLearningTutorial#%E6%94%AF%E6%92%91%E5%B7%A5%E5%85%B7)
+      - [其他资源](https://github.com/Flowingsun007/DeepLearningTutorial#%E5%85%B6%E4%BB%96%E8%B5%84%E6%BA%90)
+  - [3.3 计算机视觉](https://github.com/Flowingsun007/DeepLearningTutorial#33-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89)
+    - [3.3.1 入门概念](https://github.com/Flowingsun007/DeepLearningTutorial#331-%E5%85%A5%E9%97%A8%E6%A6%82%E5%BF%B5)
+    - [3.3.2 公开课](https://github.com/Flowingsun007/DeepLearningTutorial#332-%E5%85%AC%E5%BC%80%E8%AF%BE)
+    - [3.3.3 学习资源](https://github.com/Flowingsun007/DeepLearningTutorial#333-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90)
+- [4.公开数据集](https://github.com/Flowingsun007/DeepLearningTutorial#4%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE%E9%9B%86)
+  - [4.1 Pytorch提供](https://github.com/Flowingsun007/DeepLearningTutorial#41-Pytorch%E6%8F%90%E4%BE%9B)
+  - [4.2 Tensorflow提供](https://github.com/Flowingsun007/DeepLearningTutorial#42-Tensorflow%E6%8F%90%E4%BE%9B)
 
 ---
 
@@ -48,14 +42,14 @@
 | 项目 | 论文 | 网络 | 模型训练 |
 | --- | --- | --- | --- |
 | **LeNet** | [1998](https://ieeexplore.ieee.org/document/726791?reload=true&arnumber=726791)        | [LeNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/LeNet.py) | [train_lenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_lenet.py) |
-| **AlexNet** | [2012-PDF](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/107660669) | [AlexNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/AlexNet.py) | [train_alexnet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_alexnet.py) |
-| **Network in Network** | [2013-PDF](http://arxiv.org/pdf/1312.4400)    [论文解读](https://zhuanlan.zhihu.com/p/108235295) | [NetworkInNetwork.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/NetworkInNetwork.py) | [train_nin.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_nin.py) |
-| **VGG** | [2014-PDF](https://arxiv.org/pdf/1409.1556.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/107884876) | [VGG.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/VGG.py) | [train_vgg.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_vgg.py) |
-| **GoogLeNet** | [2014-PDF](https://arxiv.org/pdf/1409.4842)    [论文解读](https://zhuanlan.zhihu.com/p/108414921) | [GoogLeNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/GoogLenet.py) | [train_googlenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_googlenet.py) |
-| **ResNet** | [2015-PDF](https://arxiv.org/pdf/1512.03385.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/108708768) | [ResNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/ResNet.py) | [train_resnet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_resnet.py) |
-| **DenseNet** | [2016-PDF](https://arxiv.org/pdf/1608.06993.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/109269085) | [DenseNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/DenseNet.py) | [train_densenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_densenet.py) |
+| **AlexNet** | [2012-PDF](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/107660669) | [AlexNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/AlexNet.py) | [train_alexnet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_alexnet.py) |
+| **Network in Network** | [2013-PDF](http://arxiv.org/pdf/1312.4400)    [论文解读](https://zhuanlan.zhihu.com/p/108235295) | [NetworkInNetwork.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/NetworkInNetwork.py) | [train_nin.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_nin.py) |
+| **VGG** | [2014-PDF](https://arxiv.org/pdf/1409.1556.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/107884876) | [VGG.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/VGG.py) | [train_vgg.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_vgg.py) |
+| **GoogLeNet** | [2014-PDF](https://arxiv.org/pdf/1409.4842)    [论文解读](https://zhuanlan.zhihu.com/p/108414921) | [GoogLeNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/GoogLenet.py) | [train_googlenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_googlenet.py) |
+| **ResNet** | [2015-PDF](https://arxiv.org/pdf/1512.03385.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/108708768) | [ResNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/ResNet.py) | [train_resnet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_resnet.py) |
+| **DenseNet** | [2016-PDF](https://arxiv.org/pdf/1608.06993.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/109269085) | [DenseNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/DenseNet.py) | [train_densenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_densenet.py) |
 | **ShuffleNet** | [arXiV'17](https://arxiv.org/abs/1707.01083)      | x | x |
-| **MobileNetV3** | [V1](https://arxiv.org/abs/1704.04861)  [V2](https://128.84.21.199/pdf/1801.04381.pdf)  [V3](https://arxiv.org/pdf/1905.02244.pdf) | [MobileNetV3.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/MobileNetV3.py) | [train_mobilenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_mobilenet.py) |
+| **MobileNetV3** | [V1](https://arxiv.org/abs/1704.04861)  [V2](https://128.84.21.199/pdf/1801.04381.pdf)  [V3](https://arxiv.org/pdf/1905.02244.pdf) | [MobileNetV3.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/MobileNetV3.py) | [train_mobilenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_mobilenet.py) |
 
 
 ---
@@ -65,23 +59,23 @@
 | 项目 | 论文 | 网络 | 模型训练 |
 | --- | --- | --- | --- |
 | **YoloV1** | [CVPR'16](https://arxiv.org/pdf/1506.02640.pdf) | x | [官方-darknet](https://pjreddie.com/darknet/yolo/) |
-| **YoloV2**<br /> | [CVPR'17](https://arxiv.org/pdf/1612.08242.pdf) | x | [官方-darknet](https://pjreddie.com/darknet/yolo/) |
-| **YoloV3** | [arXiV'18](https://pjreddie.com/media/files/papers/YOLOv3.pdf) | x | [官方-darknet](https://pjreddie.com/darknet/yolo/)    [tensorflow](https://github.com/mystic123/tensorflow-yolo-v3)  [pytorch](https://github.com/eriklindernoren/PyTorch-YOLOv3) |
-| **SSD** | [ECCV'16](https://arxiv.org/pdf/1512.02325.pdf) | x | [官方-caffe](https://github.com/weiliu89/caffe/tree/ssd)  [tensorflow](https://github.com/balancap/SSD-Tensorflow)  [pytorch](https://github.com/amdegroot/ssd.pytorch) |
+| **YoloV2** | [CVPR'17](https://arxiv.org/pdf/1612.08242.pdf) | x | [官方-darknet](https://pjreddie.com/darknet/yolo/) |
+| **YoloV3** | [arXiV'18](https://pjreddie.com/media/files/papers/YOLOv3.pdf) | x | [官方-darknet](https://pjreddie.com/darknet/yolo/)    [tensorflow](https://github.com/mystic123/tensorflow-yolo-v3)  [pytorch](https://github.com/eriklindernoren/PyTorch-YOLOv3) |
+| **SSD** | [ECCV'16](https://arxiv.org/pdf/1512.02325.pdf) | x | [官方-caffe](https://github.com/weiliu89/caffe/tree/ssd)  [tensorflow](https://github.com/balancap/SSD-Tensorflow)  [pytorch](https://github.com/amdegroot/ssd.pytorch) |
 | **RefineDet** | [CVPR'18](http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Single-Shot_Refinement_Neural_CVPR_2018_paper.pdf) | x | [官方-caffe](https://github.com/sfzhang15/RefineDet)    [pytroch](https://github.com/lzx1413/PytorchSSD) |
 | **RetinaNet** | [ICCV'17](https://arxiv.org/pdf/1708.02002.pdf) | x | [官方-keras](https://github.com/fizyr/keras-retinanet) |
 | **NAS-FPN** | [CVPR'19](https://arxiv.org/pdf/1904.07392.pdf) | x | x |
 | **EfficientDet** | [arXiV'19](https://arxiv.org/pdf/1911.09070v1.pdf) | x | x |
 
-## 
 ## 2.2 Two-stage
 | 项目 | 论文 | 网络 | 模型训练 |
 | --- | --- | --- | --- |
 | **R-CNN** | [CVPR'14](https://arxiv.org/pdf/1311.2524.pdf) | x | [官方-caffe](https://github.com/rbgirshick/rcnn) |
 | **Fast R-CNN** | [ICCV'15](https://arxiv.org/pdf/1504.08083.pdf) | x | [caffe](https://github.com/rbgirshick/fast-rcnn) |
 | **Faster R-CNN** | [NIPS'15](https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf) | x | [官方-caffe](https://github.com/rbgirshick/py-faster-rcnn)   [tensorflow](https://github.com/endernewton/tf-faster-rcnn)   [pytorch](https://github.com/jwyang/faster-rcnn.pytorch) |
-| **Mask R-CNN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf) | x | [官方-caffe2](https://github.com/facebookresearch/Detectron)   [tf](https://github.com/matterport/Mask_RCNN)   [tf](https://github.com/CharlesShang/FastMaskRCNN)   [pytorch](https://github.com/multimodallearning/pytorch-mask-rcnn) |
-| **DCN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/Dai_Deformable_Convolutional_Networks_ICCV_2017_paper.pdf) | x | [官方-mxnet](https://github.com/msracver/Deformable-ConvNets)  [tensorflow](https://github.com/Zardinality/TF_Deformable_Net)  [pytorch](https://github.com/oeway/pytorch-deform-conv) |
+| **Mask R-CNN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf) | x | [官方-caffe2](https://github.com/facebookresearch/Detectron)   [tf](https://github.com/matterport/Mask_RCNN)   [tf](https://github.com/CharlesShang/FastMaskRCNN)   [pytorch](https://github.com/multimodallearning/pytorch-mask-rcnn) |
+| **DCN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/Dai_Deformable_Convolutional_Networks_ICCV_2017_paper.pdf) | x | [官方-mxnet](https://github.com/msracver/Deformable-ConvNets)  [tensorflow](https://github.com/Zardinality/TF_Deformable_Net)  [pytorch](https://github.com/oeway/pytorch-deform-conv) |
+| **FPN** | [CVPR'17](http://openaccess.thecvf.com/content_cvpr_2017/papers/Lin_Feature_Pyramid_Networks_CVPR_2017_paper.pdf) | x | [caffe](https://github.com/unsky/FPN) |
 | **ThunderNet** | [ICCV'19](https://arxiv.org/pdf/1903.11752.pdf) | x | x |
 
 ## 2.3 Other
@@ -100,7 +94,7 @@
 - [有趣的机器学习：最简明入门指南](http://link.zhihu.com/?target=http%3A//blog.jobbole.com/67616/)
 - [一个故事说明什么是机器学习](http://link.zhihu.com/?target=https%3A//www.cnblogs.com/subconscious/p/4107357.html)
 - [cstghitpku：干货|机器学习超全综述！](https://zhuanlan.zhihu.com/p/46320419)
-- [机器学习该怎么入门？](https://www.zhihu.com/question/20691338) <br />
+- [机器学习该怎么入门？](https://www.zhihu.com/question/20691338)
 - [如何系统入门机器学习？](https://www.zhihu.com/question/266127835)
 - [机器学习该怎么入门？](https://www.zhihu.com/question/20691338)
 ### 3.1.2 公开课
@@ -109,15 +103,7 @@
 - **谷歌** [Google 制作的节奏紧凑、内容实用的机器学习简介课程](https://developers.google.com/machine-learning/crash-course/)
 - **林軒田**[[機器學習基石]Machine Learning Foundations——哔哩哔哩](https://www.bilibili.com/video/av1624332?p=2)
 
-**网易<br />**<br />[![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638411-58eacf64-dcf5-4332-945b-f793f45b4f70.png#align=left&display=inline&height=250&originHeight=250&originWidth=450&size=0&status=done&style=none&width=450)](https://study.163.com/course/introduction/1004570029.htm)<br />[吴恩达机器学习](https://study.163.com/course/introduction/1004570029.htm)<br />网易杭州研究院<br />Google Brain 和百度大脑的发起人、Coursera 创始人吴恩达（Andrew Ng）亲授，在全球有百万选课量，主要讲述人工智能中基础的机...[查看详情](https://study.163.com/course/introduction/1004570029.htm)
-
-中文教学的优质课程加上贴近生活的案例，你将在学习AI的道路上跑得更快！<br />[![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638525-0fa86b8c-d097-4c5c-885d-641608b24eb0.png#align=left&display=inline&height=249&originHeight=250&originWidth=450&size=0&status=done&style=none&width=449)](https://study.163.com/course/introduction/1208946807.htm)<br />[李宏毅机器学习中文课程](https://study.163.com/course/introduction/1208946807.htm)<br />网易云课堂IT互联网<br />来自台湾大学李宏毅老师的课程，以精灵宝可梦作为课程案例，生动地为你讲解机器学习。同时，他还设计了六项作业和一项期末项目，...[查看详情](https://study.163.com/course/introduction/1208946807.htm)
-
-[机器学习及其深层与结构化](https://study.163.com/course/introduction/1208991809.htm)<br />网易云课堂IT互联网<br />台湾大学李宏毅老师在《机器学习》基础上提供的《机器学习及其深度与结构化》课程，为你深入解析深度学习与结构学习。[查看详情](https://study.163.com/course/introduction/1208991809.htm)
-
-[李宏毅线性代数中文课程](https://study.163.com/course/introduction/1208956807.htm)<br />网易云课堂IT互联网<br />来自台湾大学李宏毅老师的课程，专为对人工智能感兴趣，但是数学基础薄弱的同学设计，让你深刻理解数学概念，学会在人工智能应用...[查看详情](https://study.163.com/course/introduction/1208956807.htm)
-
-[机器学习前沿技术](https://study.163.com/course/introduction/1209400866.htm)<br />网易云课堂IT互联网<br />机器学习的下一步是什么？机器能不能知道“我不知道”、“我为什么知道”，机器的错觉，终身学习<br />[查看详情](https://study.163.com/course/introduction/1209400866.htm)
+**网易**<br />[![](https://camo.githubusercontent.com/eea35fe0589e9d1b64c41af9bf73be0dbf162201/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032302f706e672f3231363931342f313538343432353633383431312d35386561636636342d646366352d343333322d393435622d6637393366343562346637302e706e6723616c69676e3d6c65667426646973706c61793d696e6c696e65266865696768743d323530266f726967696e4865696768743d323530266f726967696e57696474683d3435302673697a653d30267374617475733d646f6e65267374796c653d6e6f6e652677696474683d343530#align=left&display=inline&height=250&originHeight=250&originWidth=450&status=done&style=none&width=450)](https://study.163.com/course/introduction/1004570029.htm)<br />[吴恩达机器学习](https://study.163.com/course/introduction/1004570029.htm)<br />网易杭州研究院<br />Google Brain 和百度大脑的发起人、Coursera 创始人吴恩达（Andrew Ng）亲授，在全球有百万选课量，主要讲述人工智能中基础的机...[查看详情](https://study.163.com/course/introduction/1004570029.htm)<br />中文教学的优质课程加上贴近生活的案例，你将在学习AI的道路上跑得更快！<br />[![](https://camo.githubusercontent.com/f09e216a5474a81adf2212e5a5e1900385fb0218/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032302f706e672f3231363931342f313538343432353633383532352d30666138366238632d643039372d346335632d383835642d3634313630386232346562302e706e6723616c69676e3d6c65667426646973706c61793d696e6c696e65266865696768743d323439266f726967696e4865696768743d323530266f726967696e57696474683d3435302673697a653d30267374617475733d646f6e65267374796c653d6e6f6e652677696474683d343439#align=left&display=inline&height=250&originHeight=250&originWidth=450&status=done&style=none&width=450)](https://study.163.com/course/introduction/1208946807.htm)<br />[李宏毅机器学习中文课程](https://study.163.com/course/introduction/1208946807.htm)<br />网易云课堂IT互联网<br />来自台湾大学李宏毅老师的课程，以精灵宝可梦作为课程案例，生动地为你讲解机器学习。同时，他还设计了六项作业和一项期末项目，...[查看详情](https://study.163.com/course/introduction/1208946807.htm)<br />[机器学习及其深层与结构化](https://study.163.com/course/introduction/1208991809.htm)<br />网易云课堂IT互联网<br />台湾大学李宏毅老师在《机器学习》基础上提供的《机器学习及其深度与结构化》课程，为你深入解析深度学习与结构学习。[查看详情](https://study.163.com/course/introduction/1208991809.htm)<br />[李宏毅线性代数中文课程](https://study.163.com/course/introduction/1208956807.htm)<br />网易云课堂IT互联网<br />来自台湾大学李宏毅老师的课程，专为对人工智能感兴趣，但是数学基础薄弱的同学设计，让你深刻理解数学概念，学会在人工智能应用...[查看详情](https://study.163.com/course/introduction/1208956807.htm)<br />[机器学习前沿技术](https://study.163.com/course/introduction/1209400866.htm)<br />网易云课堂IT互联网<br />机器学习的下一步是什么？机器能不能知道“我不知道”、“我为什么知道”，机器的错觉，终身学习<br />[查看详情](https://study.163.com/course/introduction/1209400866.htm)
 ### 3.1.3 学习资源
 **书**
 
@@ -146,14 +132,12 @@
 
 - [Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials)
 - [李航《统计学习方法》——代码实现](https://github.com/fengdu78/lihang-code)
-
 ### 3.1.4 竞赛平台
 
 - [Kaggle](https://www.kaggle.com/competitions)
 - [阿里天池](https://tianchi.aliyun.com/home?spm=5176.12281949.0.0.493e2448ifo8Vz)
 - [Kesci 和鲸社区](https://www.kesci.com/)
 - [百度AI Studio](https://aistudio.baidu.com/aistudio/competition)
-
 ## 3.2 深度学习
 ### 3.2.1 入门概念
 
@@ -183,29 +167,24 @@
 
 **李宏毅**<br />官方主页：[Hung-yi Lee](http://speech.ee.ntu.edu.tw/~tlkagk/talk.html)
 
-- **YouTube Channel teaching Deep Learning and Machine Learning** ([link](https://www.youtube.com/channel/UC2ggjtuuWvxrHHHiaDH1dlQ/playlists))
+- **YouTube Channel teaching Deep Learning and Machine Learning** ([link](https://www.youtube.com/channel/UC2ggjtuuWvxrHHHiaDH1dlQ/playlists))
 - [李宏毅深度学习(2016)—哔哩哔哩](https://www.bilibili.com/video/av9770190/?from=search&seid=17240241049019116161)
 - [李宏毅深度学习(2017)—哔哩哔哩](https://www.bilibili.com/video/av9770302/?from=search&seid=9981051227372686627)
 - **Tutorial for Generative Adversarial Network (GAN)**([slideshare](https://www.slideshare.net/tw_dsconf/ss-78795326),[pdf](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_GAN.pdf),[ppt](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_GAN.pptx))
 - **Tutorial for General Deep Learning Technology**([slideshare](http://www.slideshare.net/tw_dsconf/ss-62245351),[pdf](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_Deep.pdf),[ppt](http://speech.ee.ntu.edu.tw/~tlkagk/slide/Tutorial_HYLee_Deep.pptx))
 
+**网易**<br />[![](https://camo.githubusercontent.com/f44b5ac541b5f36064d483e5d97bf7a8f9070ecb/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032302f706e672f3231363931342f313538343432353633383437302d34653536643638642d393964632d343136312d383437662d3666353931303237363636302e706e6723616c69676e3d6c65667426646973706c61793d696e6c696e65266865696768743d323439266f726967696e4865696768743d323530266f726967696e57696474683d3435302673697a653d30267374617475733d646f6e65267374796c653d6e6f6e652677696474683d343439#align=left&display=inline&height=250&originHeight=250&originWidth=450&status=done&style=none&width=450)](https://study.163.com/course/introduction/1003842018.htm)<br />[Hinton机器学习与神经网络中文课](https://study.163.com/course/introduction/1003842018.htm)<br />AI研习社<br />多伦多大学教授 Geoffrey Hinton，众所周知的神经网络发明者，亲自为你讲解机器学习与神经网络相关课程。[查看详情](https://study.163.com/course/introduction/1003842018.htm)
 
-
-**网易**<br />[![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638470-4e56d68d-99dc-4161-847f-6f5910276660.png#align=left&display=inline&height=249&originHeight=250&originWidth=450&size=0&status=done&style=none&width=449)](https://study.163.com/course/introduction/1003842018.htm)<br />[Hinton机器学习与神经网络中文课](https://study.163.com/course/introduction/1003842018.htm)<br />AI研习社<br />多伦多大学教授 Geoffrey Hinton，众所周知的神经网络发明者，亲自为你讲解机器学习与神经网络相关课程。[查看详情](https://study.163.com/course/introduction/1003842018.htm)<br />
-<br />[![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638556-8035c890-9115-4ae7-8614-14d0a0884006.png#align=left&display=inline&height=249&originHeight=250&originWidth=450&size=0&status=done&style=none&width=449)](https://study.163.com/course/introduction/1004336028.htm)<br />[牛津大学xDeepMind 自然语言处理](https://study.163.com/course/introduction/1004336028.htm)<br />大数据文摘<br />由牛津大学人工智能实验室，与创造了 AlphaGo 传奇的谷歌 DeepMind 部门合作的课程，主要讲述利用深度学习实现自然语言处理（NLP...[查看详情](https://study.163.com/course/introduction/1004336028.htm)
-
-[![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638491-6011a7b5-75ec-4c8b-be46-d3818f7b94ce.png#align=left&display=inline&height=249&originHeight=250&originWidth=450&size=0&status=done&style=none&width=449)](https://study.163.com/course/introduction/1004938039.htm)<br />[MIT6.S094深度学习与自动驾驶](https://study.163.com/course/introduction/1004938039.htm)<br />大数据文摘<br />由麻省理工大学（MIT）推出的自动驾驶课程 6.S094 ，主要讲述自动驾驶技术，提供在线项目的实践环境，可直接修改官方网站代码，...[查看详情](https://study.163.com/course/introduction/1004938039.htm)
-
+[![](https://camo.githubusercontent.com/24037d321427d11dff63e86942e438f08621e000/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032302f706e672f3231363931342f313538343432353633383535362d38303335633839302d393131352d346165372d383631342d3134643061303838343030362e706e6723616c69676e3d6c65667426646973706c61793d696e6c696e65266865696768743d323439266f726967696e4865696768743d323530266f726967696e57696474683d3435302673697a653d30267374617475733d646f6e65267374796c653d6e6f6e652677696474683d343439#align=left&display=inline&height=250&originHeight=250&originWidth=450&status=done&style=none&width=450)](https://study.163.com/course/introduction/1004336028.htm)<br />[牛津大学xDeepMind 自然语言处理](https://study.163.com/course/introduction/1004336028.htm)<br />大数据文摘<br />由牛津大学人工智能实验室，与创造了 AlphaGo 传奇的谷歌 DeepMind 部门合作的课程，主要讲述利用深度学习实现自然语言处理（NLP...[查看详情](https://study.163.com/course/introduction/1004336028.htm)<br />[![](https://camo.githubusercontent.com/705d2c9b7ded47c9a48c498f7cc058854f106e18/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032302f706e672f3231363931342f313538343432353633383439312d36303131613762352d373565632d346338622d626534362d6433383138663762393463652e706e6723616c69676e3d6c65667426646973706c61793d696e6c696e65266865696768743d323439266f726967696e4865696768743d323530266f726967696e57696474683d3435302673697a653d30267374617475733d646f6e65267374796c653d6e6f6e652677696474683d343439#align=left&display=inline&height=250&originHeight=250&originWidth=450&status=done&style=none&width=450)](https://study.163.com/course/introduction/1004938039.htm)<br />[MIT6.S094深度学习与自动驾驶](https://study.163.com/course/introduction/1004938039.htm)<br />大数据文摘<br />由麻省理工大学（MIT）推出的自动驾驶课程 6.S094 ，主要讲述自动驾驶技术，提供在线项目的实践环境，可直接修改官方网站代码，...[查看详情](https://study.163.com/course/introduction/1004938039.htm)
 ### 3.2.3 学习资源
-#### 书
-[《Dive Into DeepLearning》动手学深度学习](http://zh.d2l.ai/)    [**Pytorch版**](http://tangshusen.me/Dive-into-DL-PyTorch/#/)      [**Tensorflow2.0版**](https://trickygo.github.io/Dive-into-DL-TensorFlow2.0/#/)<br />麻省理工学院出版社《[Deep Learning](http://www.deeplearningbook.org/)》    
+**书**<br />[《Dive Into DeepLearning》动手学深度学习](http://zh.d2l.ai/)    [**Pytorch版**](http://tangshusen.me/Dive-into-DL-PyTorch/#/)      [**Tensorflow2.0版**](https://trickygo.github.io/Dive-into-DL-TensorFlow2.0/#/)<br />麻省理工学院出版社《[Deep Learning](http://www.deeplearningbook.org/)》
 > 中文版：[exacity/deeplearningbook-chinese](https://github.com/exacity/deeplearningbook-chinese)
 
 《[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)》
-> 中文版：[https://tigerneil.gitbooks.io/neural-networks-and-deep-learning-zh/content/](https://tigerneil.gitbooks.io/neural-networks-and-deep-learning-zh/content/)<br />
+> 中文版：[https://tigerneil.gitbooks.io/neural-networks-and-deep-learning-zh/content/](https://tigerneil.gitbooks.io/neural-networks-and-deep-learning-zh/content/)
 
+#### CNN卷积神经网络
 
-#### 卷积神经网络CNN
 - [能否对卷积神经网络工作原理做一个直观的解释？](https://www.zhihu.com/question/39022858)
 - [CNN 入门讲解专栏阅读顺序以及论文研读视频集合](https://zhuanlan.zhihu.com/p/33855959)
 - [CNN系列模型发展简述（附github代码——已全部跑通）](https://zhuanlan.zhihu.com/p/66215918)
@@ -217,7 +196,6 @@
 - [【论文解读】CNN深度卷积神经网络-GoogLeNet](https://zhuanlan.zhihu.com/p/108414921)
 - [【论文解读】CNN深度卷积神经网络-ResNet](https://zhuanlan.zhihu.com/p/108708768)
 - [【论文解读】CNN深度卷积神经网络-DenseNet](https://zhuanlan.zhihu.com/p/109269085)
-
 #### 目标检测
 **知乎**
 
@@ -227,16 +205,27 @@
 - [干货 | 目标检测入门，看这篇就够了（已更完）](https://zhuanlan.zhihu.com/p/34142321)
 - [51 个深度学习目标检测模型汇总，论文、源码一应俱全！](https://zhuanlan.zhihu.com/p/55519131)
 
-**github**
+**论文**
 
 - 目标检测相关论文[deep_learning_object_detection](https://github.com/hoya012/deep_learning_object_detection)
+- [目标检测发展、论文综述](https://handong1587.github.io/deep_learning/2015/10/09/object-detection.html)
+- [awesome-object-detection](https://github.com/amusi/awesome-object-detection)
 
-#### 代码实战
+**发展综述<br />**
+
+- [**Object Detection in 20 Years: A Survey**](https://arxiv.org/abs/1905.05055)
+- [**A Survey of Deep Learning-based Object Detection**](https://arxiv.org/abs/1907.09408)
+- **[Imbalance Problems in Object Detection: A Review](https://arxiv.org/abs/1909.00169)**
+- [**Recent Advances in Deep Learning for Object Detection**](https://arxiv.org/abs/1908.03673)
+- [**《Deep Learning for Generic Object Detection: A Survey》**](https://arxiv.org/abs/1809.02165)
+- [**《Recent Advances in Object Detection in the Age of Deep Convolutional Neural Networks》**](https://arxiv.org/abs/1809.03193)
+
+**代码实战**
 
 - 【github】[TensorFlow2.0-Examples](https://github.com/YunYang1994/TensorFlow2.0-Examples)
+- 【github】[awesome-object-detection](https://github.com/amusi/awesome-object-detection)
 - [【目标检测实战】Darknet—yolov3模型训练（VOC数据集)](https://zhuanlan.zhihu.com/p/92141879)
 - [【目标检测实战】Pytorch—SSD模型训练（VOC数据集）](https://zhuanlan.zhihu.com/p/92154612)
-
 ### 3.2.4  开源工具
 #### 深度学习框架
 
@@ -276,22 +265,19 @@
 
 ## 3.3 计算机视觉
 ### 3.3.1 入门概念
-
 ### 3.3.2 公开课
-**网易<br />**<br />[![](https://cdn.nlark.com/yuque/0/2020/png/216914/1584425638420-b9906c7a-0da2-4c2f-abc2-7b2574909033.png#align=left&display=inline&height=249&originHeight=250&originWidth=450&size=0&status=done&style=none&width=449)](https://study.163.com/course/introduction/1003223001.htm)<br />[CS231n计算机视觉课程](https://study.163.com/course/introduction/1003223001.htm)<br />大数据文摘<br />谷歌 AI 中国的负责人、斯坦福大学副教授李飞飞（Fei-Fei L）亲授的 CS231n 课程，每年选课量都爆满的斯坦福王牌课程，主要讲述...[查看详情](https://study.163.com/course/introduction/1003223001.htm)
-
+**网易**<br />[![](https://camo.githubusercontent.com/7194aa9572bff7302a413e967ddf54c0c6c6dcdd/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032302f706e672f3231363931342f313538343432353633383432302d62393930366337612d306461322d346332662d616263322d3762323537343930393033332e706e6723616c69676e3d6c65667426646973706c61793d696e6c696e65266865696768743d323439266f726967696e4865696768743d323530266f726967696e57696474683d3435302673697a653d30267374617475733d646f6e65267374796c653d6e6f6e652677696474683d343439#align=left&display=inline&height=250&originHeight=250&originWidth=450&status=done&style=none&width=450)](https://study.163.com/course/introduction/1003223001.htm)<br />[CS231n计算机视觉课程](https://study.163.com/course/introduction/1003223001.htm)<br />大数据文摘<br />谷歌 AI 中国的负责人、斯坦福大学副教授李飞飞（Fei-Fei L）亲授的 CS231n 课程，每年选课量都爆满的斯坦福王牌课程，主要讲述...[查看详情](https://study.163.com/course/introduction/1003223001.htm)
 ### 3.3.3 学习资源
 **理论**
 
-- OpenCV官网 [https://opencv.org/](https://opencv.org/)
-- 学习网站 [https://www.learnopencv.com/](https://www.learnopencv.com/)
+- OpenCV官网 [https://opencv.org/](https://opencv.org/)
+- 学习网站 [https://www.learnopencv.com/](https://www.learnopencv.com/)
 
 **代码实战**
 
 - 【github】[OpenCV官方Demo](https://github.com/opencv/opencv/tree/master/samples/cpp)
 - [【CV实战】OpenCV—Hello world代码示例](https://zhuanlan.zhihu.com/p/58028543)
 - [【CV实战】Ubuntu18.04源码编译安装opencv-3.4.X+测试demo](https://zhuanlan.zhihu.com/p/93356275)
-
 
 ---
 

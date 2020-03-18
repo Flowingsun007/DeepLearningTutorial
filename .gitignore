@@ -1,4 +1,5 @@
 /ImageClassification/resource/logs/*
+/ImageClassification/dataset/logs/*
 
 *.h5
 *.pdf
