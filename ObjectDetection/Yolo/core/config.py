@@ -25,7 +25,7 @@ __C.YOLO                      = edict()
 # Set the class name
 # 注意：yolov3.weights是在coco数据集上训练出来的，需要和coco.names中的分类配套使用
 # 当使用yolov3.weights测试图片时，C.YOLO.CLASSES需要改成coco.names
-__C.YOLO.CLASSES              = "./data/classes/voc.names" # "./data/classes/coco.names"  ; ./data/classes/voc.names
+__C.YOLO.CLASSES              = "./data/classes/coco.names"   # "./data/classes/coco.names"  ; ./data/classes/voc.names
 __C.YOLO.ANCHORS              = "./data/anchors/basline_anchors.txt"
 __C.YOLO.STRIDES              = [8, 16, 32]
 __C.YOLO.ANCHOR_PER_SCALE     = 3
