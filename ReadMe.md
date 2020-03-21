@@ -1,4 +1,4 @@
-# 【学习资源】—Github项目说明
+# 【Github项目文档】DeepLearningTutorial项目说明
 
 **Deep Learning,Leaning deep,Have fun!**
 # 介绍
@@ -64,18 +64,18 @@
 | **SSD** | [ECCV'16](http://arxiv.org/abs/1512.02325)  [论文解读](https://zhuanlan.zhihu.com/p/33544892) | ☐ | [官方-caffe](https://github.com/weiliu89/caffe/tree/ssd)  [tensorflow](https://github.com/balancap/SSD-Tensorflow)  [pytorch](https://github.com/amdegroot/ssd.pytorch) |
 | **YoloV2** | [CVPR'17](https://arxiv.org/pdf/1612.08242.pdf)  [论文解读](https://zhuanlan.zhihu.com/p/35325884) | ☐ | [官方-darknet](https://pjreddie.com/darknet/yolov2/)    [tf](https://github.com/hizhangp/yolo_tensorflow)    [tf](https://github.com/KOD-Chen/YOLOv2-Tensorflow)   [pytorch](https://github.com/longcw/yolo2-pytorch) |
 | **RetinaNet** | [ICCV'17](https://arxiv.org/pdf/1708.02002.pdf)   [论文解读](https://zhuanlan.zhihu.com/p/68786098) | ☐ | [官方-keras](https://github.com/fizyr/keras-retinanet) |
-| **YoloV3** | [arXiV'18](https://arxiv.org/abs/1804.02767)  [论文翻译](https://zhuanlan.zhihu.com/p/37201615) | ☐ | [官方-darknet](https://github.com/pjreddie/darknet)    [tf](https://github.com/mystic123/tensorflow-yolo-v3)    [tf2.0](https://github.com/YunYang1994/TensorFlow2.0-Examples/tree/master/4-Object_Detection/YOLOV3)    [pytorch](https://github.com/eriklindernoren/PyTorch-YOLOv3) |
+| **YoloV3** | [arXiV'18](https://arxiv.org/abs/1804.02767)  [论文翻译](https://zhuanlan.zhihu.com/p/37201615) | ☐ | [官方-darknet](https://github.com/pjreddie/darknet)    [tf](https://github.com/mystic123/tensorflow-yolo-v3)    [tf2.0](https://github.com/Flowingsun007/DeepLearningTutorial/tree/master/ObjectDetection/Yolo)    [pytorch](https://github.com/eriklindernoren/PyTorch-YOLOv3) |
 | **NAS-FPN** | [CVPR'19](https://arxiv.org/abs/1904.07392)  [论文解读](https://zhuanlan.zhihu.com/p/97230695) | ☐ | ☐ |
 | **EfficientNet** | [arXiV'19](https://arxiv.org/pdf/1911.09070v1.pdf)  [论文解读](https://zhuanlan.zhihu.com/p/104790514) | ☐ | [官方-tensorflow](https://github.com/google/automl/tree/master/efficientdet) |
 
 ## 2.2 Two-stage
 | 项目 | 论文 | 网络 | 模型训练 |
 | :---: | :---: | :---: | :---: |
-| **R-CNN** | [CVPR'14](https://arxiv.org/pdf/1311.2524.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/23006190) | ☐ | [官方-caffe](https://github.com/rbgirshick/rcnn) |
-| **Fast R-CNN** | [ICCV'15](https://arxiv.org/pdf/1504.08083.pdf)     [论文解读](https://zhuanlan.zhihu.com/p/79054417) | ☐ | [官方-caffe](https://github.com/rbgirshick/fast-rcnn) [tensorflow](https://github.com/zplizzi/tensorflow-fast-rcnn) |
-| **Faster R-CNN** | [NIPS'15](https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf)     [论文解读](https://zhuanlan.zhihu.com/p/82185598) | ☐ | [官方-caffe](https://github.com/rbgirshick/py-faster-rcnn)   [tensorflow](https://github.com/endernewton/tf-faster-rcnn)   [pytorch](https://github.com/jwyang/faster-rcnn.pytorch) |
-| **Mask R-CNN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf)  [解读1](https://zhuanlan.zhihu.com/p/37998710)  [解读2](https://zhuanlan.zhihu.com/p/65321082) | ☐ | [官方-caffe2](https://github.com/facebookresearch/Detectron)   [tf](https://github.com/matterport/Mask_RCNN)   [tf](https://github.com/CharlesShang/FastMaskRCNN)   [pytorch](https://github.com/multimodallearning/pytorch-mask-rcnn) |
-| **FPN** | [CVPR'17](https://arxiv.org/abs/1612.03144)   [论文解读](https://zhuanlan.zhihu.com/p/62604038) | ☐ | [caffe](https://github.com/unsky/FPN) |
+| **R-CNN** | [CVPR'14](https://arxiv.org/pdf/1311.2524.pdf)  [论文解读+翻译](https://zhuanlan.zhihu.com/p/109269085) | ☐ | [官方-caffe](https://github.com/rbgirshick/rcnn) |
+| **Fast R-CNN** | [ICCV'15](https://arxiv.org/pdf/1504.08083.pdf)   [解读1](https://zhuanlan.zhihu.com/p/79054417)  [解读2](https://zhuanlan.zhihu.com/p/60968116) | ☐ | [官方-caffe](https://github.com/rbgirshick/fast-rcnn) [tensorflow](https://github.com/zplizzi/tensorflow-fast-rcnn) |
+| **Faster R-CNN** | [NIPS'15](https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf)   [解读1](https://zhuanlan.zhihu.com/p/82185598)  [解读2](https://zhuanlan.zhihu.com/p/61202658) | ☐ | [官方-caffe](https://github.com/rbgirshick/py-faster-rcnn)   [tensorflow](https://github.com/endernewton/tf-faster-rcnn)   [pytorch](https://github.com/jwyang/faster-rcnn.pytorch) |
+| **FPN** | [CVPR'17](https://arxiv.org/abs/1612.03144)   [解读1](https://zhuanlan.zhihu.com/p/62604038) [解读2](https://zhuanlan.zhihu.com/p/62604038) | ☐ | [caffe](https://github.com/unsky/FPN) |
+| **Mask R-CNN** | [ICCV'17](http://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf)    [解读1](https://zhuanlan.zhihu.com/p/37998710)  [解读2](https://zhuanlan.zhihu.com/p/65321082) | ☐ | [官方-caffe2](https://github.com/facebookresearch/Detectron)   [tf](https://github.com/matterport/Mask_RCNN)   [tf](https://github.com/CharlesShang/FastMaskRCNN)   [pytorch](https://github.com/multimodallearning/pytorch-mask-rcnn) |
 | **ThunderNet** | [ICCV'19](https://arxiv.org/pdf/1903.11752.pdf)    [论文解读](https://zhuanlan.zhihu.com/p/61113865) | ☐ | ☐ |
 
 ## 2.3 资源分享
@@ -86,6 +86,7 @@
 - [基于深度学习的目标检测算法综述（三）](https://zhuanlan.zhihu.com/p/40102001)
 - [干货 | 目标检测入门，看这篇就够了（已更完）](https://zhuanlan.zhihu.com/p/34142321)
 - [51 个深度学习目标检测模型汇总，论文、源码一应俱全！](https://zhuanlan.zhihu.com/p/55519131)
+- [two/one-stage,anchor-based/free目标检测发展及总结：一文了解目标检测](https://zhuanlan.zhihu.com/p/100823629)
 ### 2.3.2 论文
 **【论文合集】**
 
