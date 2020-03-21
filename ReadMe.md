@@ -71,7 +71,7 @@
 ## 2.2 Two-stage
 | 项目 | 论文 | 网络 | 模型训练 |
 | :---: | :---: | :---: | :---: |
-| **R-CNN** | [CVPR'14](https://arxiv.org/pdf/1311.2524.pdf)  [论文解读+翻译](https://zhuanlan.zhihu.com/p/109269085) | ☐ | [官方-caffe](https://github.com/rbgirshick/rcnn) |
+| **R-CNN** | [CVPR'14](https://arxiv.org/pdf/1311.2524.pdf)  [论文解读+翻译](https://zhuanlan.zhihu.com/p/115060099) | ☐ | [官方-caffe](https://github.com/rbgirshick/rcnn) |
 | **Fast R-CNN** | [ICCV'15](https://arxiv.org/pdf/1504.08083.pdf)   [解读1](https://zhuanlan.zhihu.com/p/79054417)  [解读2](https://zhuanlan.zhihu.com/p/60968116) | ☐ | [官方-caffe](https://github.com/rbgirshick/fast-rcnn) [tensorflow](https://github.com/zplizzi/tensorflow-fast-rcnn) |
 | **Faster R-CNN** | [NIPS'15](https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf)   [解读1](https://zhuanlan.zhihu.com/p/82185598)  [解读2](https://zhuanlan.zhihu.com/p/61202658) | ☐ | [官方-caffe](https://github.com/rbgirshick/py-faster-rcnn)   [tensorflow](https://github.com/endernewton/tf-faster-rcnn)   [pytorch](https://github.com/jwyang/faster-rcnn.pytorch) |
 | **FPN** | [CVPR'17](https://arxiv.org/abs/1612.03144)   [解读1](https://zhuanlan.zhihu.com/p/62604038) [解读2](https://zhuanlan.zhihu.com/p/62604038) | ☐ | [caffe](https://github.com/unsky/FPN) |
