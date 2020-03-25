@@ -42,14 +42,20 @@ def test_image(image_path, model_path):
         bbox_tensors.append(bbox_tensor)
 
     model = tf.keras.Model(input_layer, bbox_tensors)
+    # model.load_weights(model_path)
     utils.load_weights(model, model_path)
-    model.summary()
-
+    # model.summary()
+    start_time = time.time()
     pred_bbox = model.predict(image_data)
+    end_time = time.time()
+    print("time: %.2f ms" %(1000*(end_time-start_time)))
+
     pred_bbox = [tf.reshape(x, (-1, tf.shape(x)[-1])) for x in pred_bbox]
     pred_bbox = tf.concat(pred_bbox, axis=0)
+    # 将416×416下的bbox坐标转换为原图上的坐标并删除部分无效box
     bboxes = utils.postprocess_boxes(pred_bbox, original_image_size, input_size, 0.3)
     bboxes = utils.nms(bboxes, 0.45, method='nms')
+    # 构建原图和bbox画出坐标框
     image = utils.draw_bbox(original_image, bboxes)
     image = Image.fromarray(image)
     image.show()
@@ -69,7 +75,7 @@ def test_video(video_path, model_path):
 
     model = tf.keras.Model(input_layer, bbox_tensors)
     utils.load_weights(model, model_path)
-    model.summary()
+    # model.summary()
     vid = cv2.VideoCapture(video_path)
     while True:
         return_value, frame = vid.read()
@@ -103,7 +109,8 @@ def test_video(video_path, model_path):
 
 
 if __name__=='__main__':
-    model_path = "./weight/yolov3.weights"
+    model_path = "./weight/yolov3-voc_10000.weights"  # ./weight/yolov3.weights    ./weight/yolov3-voc_10000.weights
+
     # 测试图片
     image_path   = "./resource/kite.jpg"
     test_image(image_path, model_path)

@@ -20,7 +20,7 @@ import cv2
 import tensorflow as tf
 import core.utils as utils
 from tqdm import tqdm
-from core import yolov3
+from core import yolov3,yolov3_subclass
 from core.config import cfg
 
 print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
@@ -40,13 +40,13 @@ class Dataset(object):
         self.strides = np.array(cfg.YOLO.STRIDES)                    # FPN采样尺寸：[8, 16, 32]
         self.classes = utils.read_class_names(cfg.YOLO.CLASSES)  
         self.num_classes = len(self.classes)                         # 图像类别总数
-        self.anchors = np.array(utils.get_anchors(cfg.YOLO.ANCHORS)) 
-        self.anchor_per_scale = cfg.YOLO.ANCHOR_PER_SCALE
-        self.max_bbox_per_scale = 150
+        self.anchors = np.array(utils.get_anchors(cfg.YOLO.ANCHORS)) # 9种尺寸的先验框anchor box
+        self.anchor_per_scale = cfg.YOLO.ANCHOR_PER_SCALE            # 每个网格中anchor的个数，值 = 3
+        self.max_bbox_per_scale = 150                                # 每个采样率下许存在的目标框最大数量
 
-        self.annotations = self.load_annotations(dataset_type)             # 标记
+        self.annotations = self.load_annotations(dataset_type)             # 真实标记(box)
         self.num_samples = len(self.annotations)                           # 标记总数
-        self.num_batchs = int(np.ceil(self.num_samples / self.batch_size)) # 每轮迭代总步数  np.ceil返回上进位整数上（53.1 > 54）
+        self.num_batchs = int(np.ceil(self.num_samples / self.batch_size)) # 每轮迭代总步数  np.ceil返回上进位整数上（53.1 >>> 54）
         self.batch_count = 0
 
 
@@ -61,13 +61,13 @@ class Dataset(object):
         return self
 
     def __next__(self):
-
+        """next产生一批(三种采样率)图像和标签数据"""
         with tf.device('/cpu:0'):
-            self.train_input_size = random.choice(self.train_input_sizes)
-            self.train_output_sizes = self.train_input_size // self.strides
+            self.train_input_size = random.choice(self.train_input_sizes)    # 输入图片尺寸
+            self.train_output_sizes = self.train_input_size // self.strides  # 输出图片尺寸 = 输入//下采样缩放倍数
 
             batch_image = np.zeros((self.batch_size, self.train_input_size, self.train_input_size, 3), dtype=np.float32)
-
+            # 这里s,m,l分别对应三种下采样缩放率8,16,32
             batch_label_sbbox = np.zeros((self.batch_size, self.train_output_sizes[0], self.train_output_sizes[0],
                                           self.anchor_per_scale, 5 + self.num_classes), dtype=np.float32)
             batch_label_mbbox = np.zeros((self.batch_size, self.train_output_sizes[1], self.train_output_sizes[1],
@@ -86,6 +86,7 @@ class Dataset(object):
                     if index >= self.num_samples: index -= self.num_samples
                     annotation = self.annotations[index]
                     image, bboxes = self.parse_annotation(annotation)
+                    # 根据给定的真实标记bbox来解析出三种采样率下对应的label和box
                     label_sbbox, label_mbbox, label_lbbox, sbboxes, mbboxes, lbboxes = self.preprocess_true_boxes(bboxes)
 
                     batch_image[num, :, :, :] = image
@@ -104,11 +105,12 @@ class Dataset(object):
                 return batch_image, (batch_smaller_target, batch_medium_target, batch_larger_target)
             else:
                 self.batch_count = 0
+                # 随机打乱annotation
                 np.random.shuffle(self.annotations)
                 raise StopIteration
 
     def random_horizontal_flip(self, image, bboxes):
-
+        """随机水平平移"""
         if random.random() < 0.5:
             _, w, _ = image.shape
             image = image[:, ::-1, :]
@@ -117,7 +119,7 @@ class Dataset(object):
         return image, bboxes
 
     def random_crop(self, image, bboxes):
-
+        """随机剪裁"""
         if random.random() < 0.5:
             h, w, _ = image.shape
             max_bbox = np.concatenate([np.min(bboxes[:, 0:2], axis=0), np.max(bboxes[:, 2:4], axis=0)], axis=-1)
@@ -140,7 +142,7 @@ class Dataset(object):
         return image, bboxes
 
     def random_translate(self, image, bboxes):
-
+        """随机旋转"""
         if random.random() < 0.5:
             h, w, _ = image.shape
             max_bbox = np.concatenate([np.min(bboxes[:, 0:2], axis=0), np.max(bboxes[:, 2:4], axis=0)], axis=-1)
@@ -162,25 +164,29 @@ class Dataset(object):
         return image, bboxes
 
     def parse_annotation(self, annotation):
-
+        """根据path解析图片，并返回所有的bboxs标记目标框
+        一个标记框坐标如： 58,107,291,465,2   x,y,h,w,class_id
+        分别表示框中心坐标(x,y)，box框的width,height,目标框所属类别索引(如VOC数据集class_id索引为0~19共20类
+        """
         line = annotation.split()
-        image_path = line[0]
+        # image_path在每一行开头的位置
+        image_path = line[0] 
         if not os.path.exists(image_path):
             raise KeyError("%s does not exist ... " %image_path)
         image = cv2.imread(image_path)
         bboxes = np.array([list(map(int, box.split(','))) for box in line[1:]])
-
+        # 是否采用图片数据增强
         if self.data_aug:
-            image, bboxes = self.random_horizontal_flip(np.copy(image), np.copy(bboxes))
-            image, bboxes = self.random_crop(np.copy(image), np.copy(bboxes))
-            image, bboxes = self.random_translate(np.copy(image), np.copy(bboxes))
+            image, bboxes = self.random_horizontal_flip(np.copy(image), np.copy(bboxes))  # 随机水平移动
+            image, bboxes = self.random_crop(np.copy(image), np.copy(bboxes))             # 随机剪裁
+            image, bboxes = self.random_translate(np.copy(image), np.copy(bboxes))        # 随机旋转
 
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image, bboxes = utils.image_preporcess(np.copy(image), [self.train_input_size, self.train_input_size], np.copy(bboxes))
         return image, bboxes
 
     def bbox_iou(self, boxes1, boxes2):
-
+        """计算两个box之间的iou"""
         boxes1 = np.array(boxes1)
         boxes2 = np.array(boxes2)
 
@@ -202,50 +208,74 @@ class Dataset(object):
         return inter_area / union_area
 
     def preprocess_true_boxes(self, bboxes):
-
+        """根据给定的真实标记bbox来解析出三种采样率下对应的label和box
+           即用先验的anchor box来铆定对应的真实box
+        """
+        # label[i]的shape——(train_output_sizes × train_output_sizes × anchor_per_scale × (5 + num_classes))
+        # 5 + num_classes：x,y,w,h,置信度 + num_classes:分类概率矩阵
         label = [np.zeros((self.train_output_sizes[i], self.train_output_sizes[i], self.anchor_per_scale,
                            5 + self.num_classes)) for i in range(3)]
-        bboxes_xywh = [np.zeros((self.max_bbox_per_scale, 4)) for _ in range(3)]
+
+        # bboxes_xywh[i]的shape——max_bbox_per_scale × 4
+        # max_bbox_per_scale即该采样率下最多可以包含的真实box数量150；4即x,y,h,w
+        bboxes_xywh = [np.zeros((self.max_bbox_per_scale, 4)) for _ in range(3)] # [(150,4),(150,4),(150,4)]
+        # 三种采样率下bbox的数量，每种采样率下最多包含max_bbox_per_scale个box
         bbox_count = np.zeros((3,))
-
+        # 遍历真实标记的boxes,找到对应box在相应网格中的label（即充当label的anchor box）
         for bbox in bboxes:
+            # 获取x_min, y_min, x_max, y_max
             bbox_coor = bbox[:4]
+            # 类别id
             bbox_class_ind = bbox[4]
-
+            # 将物体类别转化为one_hot编码
             onehot = np.zeros(self.num_classes, dtype=np.float)
             onehot[bbox_class_ind] = 1.0
             uniform_distribution = np.full(self.num_classes, 1.0 / self.num_classes)
             deta = 0.01
+            # 平滑处理
             smooth_onehot = onehot * (1 - deta) + deta * uniform_distribution
-
+            # 计算(x,y,w,h)——(x,y) = ((x_max, y_max) + (x_min, y_min)) * 0.5 ; (w,h) = (x_max, y_max) - (x_min, y_min)
             bbox_xywh = np.concatenate([(bbox_coor[2:] + bbox_coor[:2]) * 0.5, bbox_coor[2:] - bbox_coor[:2]], axis=-1)
+            # 按8,16,32缩放后的(x,y,w,h) shape = (3, 4)
             bbox_xywh_scaled = 1.0 * bbox_xywh[np.newaxis, :] / self.strides[:, np.newaxis]
 
             iou = []
+            # 这里exist_positive表示标记的box所落在的网格中，存在和其iou值大于0.3的anchor box,即用此anchor来表示标记box
             exist_positive = False
             for i in range(3):
-                anchors_xywh = np.zeros((self.anchor_per_scale, 4))
+                # 根据缩放后的bbox_xywh_scaled在3个缩放率下计算iou从而找到用来对应真实box的anchor box
+                anchors_xywh = np.zeros((self.anchor_per_scale, 4)) # shape 3×4，存放该下采样缩放率下的三个anchor box
+                # 定位anchor的x,y坐标位置(+0.5是神马意思？？？！！！)
                 anchors_xywh[:, 0:2] = np.floor(bbox_xywh_scaled[i, 0:2]).astype(np.int32) + 0.5
+                # 定位anchor的w和h（从文件中读取的anchor的宽和高乘以对应缩放率进行还原）
                 anchors_xywh[:, 2:4] = self.anchors[i]
-
+                # 计算标记box和对应网格内三个anchor box的交并比
                 iou_scale = self.bbox_iou(bbox_xywh_scaled[i][np.newaxis, :], anchors_xywh)
                 iou.append(iou_scale)
+                # 找到iou > 0.3的anchor box
                 iou_mask = iou_scale > 0.3
-
-                if np.any(iou_mask):
+                # 处理iou大于0.3的anchor box
+                if np.any(iou_mask): # 只要有一个满足，即为true
+                    # 构造box对应的label
+                    # 向下取整，获取anchor所在格子的在该缩放率下的坐标索引xind和yind
                     xind, yind = np.floor(bbox_xywh_scaled[i, 0:2]).astype(np.int32)
-
                     label[i][yind, xind, iou_mask, :] = 0
+                    # 填充真实x,y,w,h
                     label[i][yind, xind, iou_mask, 0:4] = bbox_xywh
+                    # 填充该label置信度为1
                     label[i][yind, xind, iou_mask, 4:5] = 1.0
+                    # 填充分类概率矩阵为smooth_onehot
                     label[i][yind, xind, iou_mask, 5:] = smooth_onehot
-
+                    # bbox_ind即真实框在150个bbox下的索引
                     bbox_ind = int(bbox_count[i] % self.max_bbox_per_scale)
+                    # 给第bbox_ind的bbox赋值x,y,w,h
                     bboxes_xywh[i][bbox_ind, :4] = bbox_xywh
+                    # 该缩放率下真实框的个数+1
                     bbox_count[i] += 1
 
                     exist_positive = True
 
+            # 三个采样率下的各3个anchor box都没有找到对应的iou>0.3的正例box,则取iou最大的那个来代表
             if not exist_positive:
                 best_anchor_ind = np.argmax(np.array(iou).reshape(-1), axis=-1)
                 best_detect = int(best_anchor_ind / self.anchor_per_scale)
@@ -262,6 +292,7 @@ class Dataset(object):
                 bbox_count[best_detect] += 1
         label_sbbox, label_mbbox, label_lbbox = label
         sbboxes, mbboxes, lbboxes = bboxes_xywh
+        # 返回三个缩放尺度下的label，和true box数据对
         return label_sbbox, label_mbbox, label_lbbox, sbboxes, mbboxes, lbboxes
 
     def __len__(self):
@@ -273,7 +304,7 @@ def train_step(image_data, target):
         pred_result = model(image_data, training=True)
         giou_loss=conf_loss=prob_loss=0
 
-        # optimizing process
+        # 计算损失，for循环计算三个采样率下的损失，注意：此处取三种采样率下的总损失而不是平均损失
         for i in range(3):
             conv, pred = pred_result[i*2], pred_result[i*2+1]
             loss_items = yolov3.compute_loss(pred, conv, *target[i], i)
@@ -290,7 +321,7 @@ def train_step(image_data, target):
                  "prob_loss: %4.2f   total_loss: %4.2f" %(global_steps, optimizer.lr.numpy(),
                                                           giou_loss, conf_loss,
                                                           prob_loss, total_loss))
-        # update learning rate
+        # 更新学习率
         global_steps.assign_add(1)
         if global_steps < warmup_steps:
             lr = global_steps / warmup_steps *cfg.TRAIN.LR_INIT
@@ -300,7 +331,7 @@ def train_step(image_data, target):
             )
         optimizer.lr.assign(lr.numpy())
 
-        # writing summary data
+        # 写log到tensorboard
         with writer.as_default():
             tf.summary.scalar("lr", optimizer.lr, step=global_steps)
             tf.summary.scalar("loss/total_loss", total_loss, step=global_steps)
@@ -311,7 +342,9 @@ def train_step(image_data, target):
 
 
 if __name__=='__main__':
-
+    """注意：
+        加载darknet训练好的模型如：yolov3.weights，用utils.load_weights(model, model_path)否则直接model.load_weights即可
+    """
     # 构建训练数据集
     trainset = Dataset('train')
     # 删除log文件夹及其内容
@@ -319,7 +352,8 @@ if __name__=='__main__':
     if os.path.exists(logdir): shutil.rmtree(logdir)
     writer = tf.summary.create_file_writer(logdir)
     # 构建yolov3网络
-    model = yolov3.build_yolov3()
+    # model = yolov3_subclass.build_yolov3()
+    model = yolov3.build_yolov3()         
     # model.load_weights("./weight/17_epoch_yolov3.weights")
     print(model.summary())
     # 定义优化器

@@ -111,5 +111,5 @@ def evaluate(model_path):
 
 
 if __name__=='__main__':
-    model_path = './weight/17_epoch_yolov3.weights'
+    model_path = './weight/yolov3_train_4.tf'
     evaluate(model_path)

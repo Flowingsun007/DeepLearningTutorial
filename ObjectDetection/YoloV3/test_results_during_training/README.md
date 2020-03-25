@@ -1,0 +1,1 @@
+The test results on the sample images during training will be saved here.

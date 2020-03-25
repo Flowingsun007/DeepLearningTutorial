@@ -195,7 +195,11 @@ def nms(bboxes, iou_threshold, sigma=0.3, method='nms'):
 
 
 def postprocess_boxes(pred_bbox, org_img_shape, input_size, score_threshold):
-
+    """
+    此方法作用：将416×416大小的，带标记box的图还原成原始尺寸的图，并将box坐标还原成原图上的坐标；剔除部分无效的预测box
+    org_img_shape 即原图尺寸
+    input_size 通常为416
+    """
     valid_scale=[0, np.inf]
     pred_bbox = np.array(pred_bbox)
 
