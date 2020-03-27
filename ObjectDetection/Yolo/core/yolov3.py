@@ -145,7 +145,7 @@ def upsample(input_layer):
 
 
 def build_yolov3():
-    """
+    """构建包含三种采样率decode输出的网络
     conv_tensors = YOLOv3(input_tensor)中
     conv_tensors为YOLOv3的网络输出列表，其内容为3个tensor,分别表示8,16,32倍采样率下的输出。
     [<tf.Tensor 'conv2d_74/Identity:0' shape=(None, 52, 52, 75) dtype=float32>, 
@@ -157,15 +157,8 @@ def build_yolov3():
     3标记了3种尺寸的先验框的；5则 = x,y,w,h,边框prob，num_class长度则是判定的所有类别的概率向量。
     """
     input_tensor = tf.keras.layers.Input([416, 416, 3])
-    # conv_tensors包含网络三个分支上的输出结果
-    conv_tensors = YOLOv3(input_tensor)
-    print('conv_tensors.shape',conv_tensors)
-    output_tensors = []
-    for i, conv_tensor in enumerate(conv_tensors):
-        pred_tensor = decode(conv_tensor, i)
-        output_tensors.append(conv_tensor)
-        output_tensors.append(pred_tensor)
-    model = tf.keras.Model(input_tensor, output_tensors)
+    output_tensor = YOLOv3(input_tensor)
+    model = tf.keras.Model(input_tensor, output_tensor)
     return model
 
 
@@ -184,7 +177,7 @@ def decode(conv_output, i=0):
 
     conv_shape       = tf.shape(conv_output) # 将conv_output的维度数字转化为维度矩阵输出
     batch_size       = conv_shape[0] # 预测出box框的数量 
-    output_size      = conv_shape[1] # 特征图的尺寸：13、26或52  
+    output_size      = conv_shape[1] # 特征图的尺寸：52、26或13
 
     conv_output = tf.reshape(conv_output, (batch_size, output_size, output_size, 3, 5 + NUM_CLASS))
 
@@ -205,6 +198,7 @@ def decode(conv_output, i=0):
     pred_xywh = tf.concat([pred_xy, pred_wh], axis=-1)
     # 预测类别的置信度0~1
     pred_conf = tf.sigmoid(conv_raw_conf)
+    #print('decode() pred_conf >>>>>>>>>>>>>>>>>>>>>>>>>',pred_conf)
     # 预测的类别向量(num_class类)
     pred_prob = tf.sigmoid(conv_raw_prob)
     # 拼接所有预测结果tensor
@@ -295,6 +289,8 @@ def compute_loss(pred, conv, label, bboxes, i=0):
     respond_bbox  = label[:, :, :, :, 4:5]
     label_prob    = label[:, :, :, :, 5:]
 
+    print('label_xywh x,y,w,h >>> pred_xywh  x,y,w,h', label_xywh[0,0,0,0,0:4], pred_xywh[0,0,0,0,0:4])
+
     # 计算giou损失(预测box之间和anchor box之间)
     giou = tf.expand_dims(bbox_giou(pred_xywh, label_xywh), axis=-1)
     input_size = tf.cast(input_size, tf.float32)
@@ -316,8 +312,6 @@ def compute_loss(pred, conv, label, bboxes, i=0):
     giou_loss = tf.reduce_mean(tf.reduce_sum(giou_loss, axis=[1,2,3,4]))
     conf_loss = tf.reduce_mean(tf.reduce_sum(conf_loss, axis=[1,2,3,4]))
     prob_loss = tf.reduce_mean(tf.reduce_sum(prob_loss, axis=[1,2,3,4]))
-
+    print('giou_loss, conf_loss, prob_loss >>>>>>>>>>>>>>>> ',giou_loss, conf_loss, prob_loss)
     return giou_loss, conf_loss, prob_loss
-
-
 

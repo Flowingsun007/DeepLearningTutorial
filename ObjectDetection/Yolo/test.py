@@ -1,16 +1,3 @@
-#! /usr/bin/env python
-# coding=utf-8
-#================================================================
-#   Copyright (C) 2019 * Ltd. All rights reserved.
-#
-#   Editor      : VIM
-#   File name   : image_demo.py
-#   Author      : YunYang1994
-#   Created date: 2019-07-12 13:07:27
-#   Description :
-#
-#================================================================
-
 import cv2
 import numpy as np
 import core.utils as utils
@@ -42,9 +29,10 @@ def test_image(image_path, model_path):
         bbox_tensors.append(bbox_tensor)
 
     model = tf.keras.Model(input_layer, bbox_tensors)
-    # model.load_weights(model_path)
+    # 加载tf  model:     model.load_weights(model_path);
+    # 加载darknet model: utils.load_weights(model, model_path)
     utils.load_weights(model, model_path)
-    # model.summary()
+    model.summary()
     start_time = time.time()
     pred_bbox = model.predict(image_data)
     end_time = time.time()
@@ -74,6 +62,7 @@ def test_video(video_path, model_path):
         bbox_tensors.append(bbox_tensor)
 
     model = tf.keras.Model(input_layer, bbox_tensors)
+    # model.load_weights(model_path)
     utils.load_weights(model, model_path)
     # model.summary()
     vid = cv2.VideoCapture(video_path)
@@ -109,11 +98,11 @@ def test_video(video_path, model_path):
 
 
 if __name__=='__main__':
-    model_path = "./weight/yolov3-voc_10000.weights"  # ./weight/yolov3.weights    ./weight/yolov3-voc_10000.weights
+    model_path = "./weight/yolov3.weights"  #  ./weight/30_epoch_yolov3_weights
 
     # 测试图片
-    image_path   = "./resource/kite.jpg"
-    test_image(image_path, model_path)
+    test_image("./resource/kite.jpg", model_path)
+
     # 测试视频
     # video_path = "./resource/road.mp4"
     # test_video(video_path, model_path)

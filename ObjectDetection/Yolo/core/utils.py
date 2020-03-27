@@ -1,16 +1,3 @@
-#! /usr/bin/env python
-# coding=utf-8
-#================================================================
-#   Copyright (C) 2019 * Ltd. All rights reserved.
-#
-#   Editor      : VIM
-#   File name   : utils.py
-#   Author      : YunYang1994
-#   Created date: 2019-07-12 01:33:38
-#   Description :
-#
-#================================================================
-
 import cv2
 import random
 import colorsys

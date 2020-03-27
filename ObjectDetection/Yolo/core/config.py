@@ -1,16 +1,3 @@
-#! /usr/bin/env python
-# coding=utf-8
-#================================================================
-#   Copyright (C) 2019 * Ltd. All rights reserved.
-#
-#   Editor      : VIM
-#   File name   : config.py
-#   Author      : YunYang1994
-#   Created date: 2019-02-28 13:06:54
-#   Description :
-#
-#================================================================
-
 from easydict import EasyDict as edict
 
 
@@ -24,7 +11,7 @@ __C.YOLO                      = edict()
 
 # Set the class name
 # 注意：yolov3.weights是在coco数据集上训练出来的，需要和coco.names配套使用；训练和测试VOC训练的模型，则需要voc.names
-__C.YOLO.CLASSES              = "./data/classes/voc.names"   # "./data/classes/coco.names"  ; ./data/classes/voc.names
+__C.YOLO.CLASSES              = "./data/classes/coco.names"   # ./data/classes/voc.names
 __C.YOLO.ANCHORS              = "./data/anchors/basline_anchors.txt"  # 先验框的尺寸，每种采样率下各3个尺寸，共计3×3 = 9种尺寸比例(此基准尺寸需要乘以8,16,32进行还原)
 __C.YOLO.STRIDES              = [8, 16, 32]
 __C.YOLO.ANCHOR_PER_SCALE     = 3
@@ -38,10 +25,10 @@ __C.TRAIN.BATCH_SIZE          = 8
 # __C.TRAIN.INPUT_SIZE            = [320, 352, 384, 416, 448, 480, 512, 544, 576, 608]
 __C.TRAIN.INPUT_SIZE          = [416]
 __C.TRAIN.DATA_AUG            = True
-__C.TRAIN.LR_INIT             = 1e-3
+__C.TRAIN.LR_INIT             = 5e-4 # 1e-3
 __C.TRAIN.LR_END              = 1e-6
 __C.TRAIN.WARMUP_EPOCHS       = 0
-__C.TRAIN.EPOCHS              = 30
+__C.TRAIN.EPOCHS              = 60
 
 
 

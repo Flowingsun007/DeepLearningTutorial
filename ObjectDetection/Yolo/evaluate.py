@@ -1,16 +1,3 @@
-#! /usr/bin/env python
-# coding=utf-8
-#================================================================
-#   Copyright (C) 2019 * Ltd. All rights reserved.
-#
-#   Editor      : VIM
-#   File name   : test.py
-#   Author      : YunYang1994
-#   Created date: 2019-07-19 10:29:34
-#   Description :
-#
-#================================================================
-
 import cv2
 import os
 import shutil
@@ -111,5 +98,5 @@ def evaluate(model_path):
 
 
 if __name__=='__main__':
-    model_path = './weight/yolov3_train_4.tf'
+    model_path = '7_epoch_yolov3_weights'
     evaluate(model_path)

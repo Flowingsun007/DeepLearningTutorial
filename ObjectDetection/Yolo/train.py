@@ -1,15 +1,3 @@
-#! /usr/bin/env python
-# coding=utf-8
-#================================================================
-#   Copyright (C) 2019 * Ltd. All rights reserved.
-#
-#   Editor      : VIM
-#   File name   : train.py
-#   Author      : YunYang1994
-#   Created date: 2019-07-18 09:18:54
-#   Description :
-#
-#================================================================
 from __future__ import absolute_import, division, print_function, unicode_literals
 import os
 import time
@@ -88,7 +76,6 @@ class Dataset(object):
                     image, bboxes = self.parse_annotation(annotation)
                     # 根据给定的真实标记bbox来解析出三种采样率下对应的label和box
                     label_sbbox, label_mbbox, label_lbbox, sbboxes, mbboxes, lbboxes = self.preprocess_true_boxes(bboxes)
-
                     batch_image[num, :, :, :] = image
                     batch_label_sbbox[num, :, :, :, :] = label_sbbox
                     batch_label_mbbox[num, :, :, :, :] = label_mbbox
@@ -213,7 +200,7 @@ class Dataset(object):
         """
         # label[i]的shape——(train_output_sizes × train_output_sizes × anchor_per_scale × (5 + num_classes))
         # 5 + num_classes：x,y,w,h,置信度 + num_classes:分类概率矩阵
-        label = [np.zeros((self.train_output_sizes[i], self.train_output_sizes[i], self.anchor_per_scale,
+        labels = [np.zeros((self.train_output_sizes[i], self.train_output_sizes[i], self.anchor_per_scale,
                            5 + self.num_classes)) for i in range(3)]
 
         # bboxes_xywh[i]的shape——max_bbox_per_scale × 4
@@ -259,13 +246,15 @@ class Dataset(object):
                     # 构造box对应的label
                     # 向下取整，获取anchor所在格子的在该缩放率下的坐标索引xind和yind
                     xind, yind = np.floor(bbox_xywh_scaled[i, 0:2]).astype(np.int32)
-                    label[i][yind, xind, iou_mask, :] = 0
+                    #print(']]]]]]]]]]]]]]]]]]]]]]]]xind, yind, best_anchor',xind, yind, iou_mask)
+                    labels[i][yind, xind, iou_mask, :] = 0
                     # 填充真实x,y,w,h
-                    label[i][yind, xind, iou_mask, 0:4] = bbox_xywh
+                    labels[i][yind, xind, iou_mask, 0:4] = bbox_xywh
+                    #print('labels[i][yind, xind, iou_mask, 0:4]', labels[i][yind, xind, iou_mask, 0:4])
                     # 填充该label置信度为1
-                    label[i][yind, xind, iou_mask, 4:5] = 1.0
+                    labels[i][yind, xind, iou_mask, 4:5] = 1.0
                     # 填充分类概率矩阵为smooth_onehot
-                    label[i][yind, xind, iou_mask, 5:] = smooth_onehot
+                    labels[i][yind, xind, iou_mask, 5:] = smooth_onehot
                     # bbox_ind即真实框在150个bbox下的索引
                     bbox_ind = int(bbox_count[i] % self.max_bbox_per_scale)
                     # 给第bbox_ind的bbox赋值x,y,w,h
@@ -282,15 +271,17 @@ class Dataset(object):
                 best_anchor = int(best_anchor_ind % self.anchor_per_scale)
                 xind, yind = np.floor(bbox_xywh_scaled[best_detect, 0:2]).astype(np.int32)
 
-                label[best_detect][yind, xind, best_anchor, :] = 0
-                label[best_detect][yind, xind, best_anchor, 0:4] = bbox_xywh
-                label[best_detect][yind, xind, best_anchor, 4:5] = 1.0
-                label[best_detect][yind, xind, best_anchor, 5:] = smooth_onehot
+                labels[best_detect][yind, xind, best_anchor, :] = 0
+                labels[best_detect][yind, xind, best_anchor, 0:4] = bbox_xywh
+                labels[best_detect][yind, xind, best_anchor, 4:5] = 1.0
+                labels[best_detect][yind, xind, best_anchor, 5:] = smooth_onehot
 
                 bbox_ind = int(bbox_count[best_detect] % self.max_bbox_per_scale)
                 bboxes_xywh[best_detect][bbox_ind, :4] = bbox_xywh
                 bbox_count[best_detect] += 1
-        label_sbbox, label_mbbox, label_lbbox = label
+
+
+        label_sbbox, label_mbbox, label_lbbox = labels
         sbboxes, mbboxes, lbboxes = bboxes_xywh
         # 返回三个缩放尺度下的label，和true box数据对
         return label_sbbox, label_mbbox, label_lbbox, sbboxes, mbboxes, lbboxes
@@ -301,21 +292,20 @@ class Dataset(object):
 
 def train_step(image_data, target):
     with tf.GradientTape() as tape:
-        pred_result = model(image_data, training=True)
+        output = model(image_data, training=True)
         giou_loss=conf_loss=prob_loss=0
 
         # 计算损失，for循环计算三个采样率下的损失，注意：此处取三种采样率下的总损失而不是平均损失
         for i in range(3):
-            conv, pred = pred_result[i*2], pred_result[i*2+1]
-            loss_items = yolov3.compute_loss(pred, conv, *target[i], i)
+            # pred.shape (8, 52, 52, 3, 25) -----  output[i].shape  (8, 52, 52, 75)
+            pred = yolov3.decode(output[i], i)
+            loss_items = yolov3.compute_loss(pred, output[i], *target[i], i)
             giou_loss += loss_items[0]
             conf_loss += loss_items[1]
             prob_loss += loss_items[2]
-
         total_loss = giou_loss + conf_loss + prob_loss
-
+        # 对权重矩阵更新梯度(应用梯度下降)
         gradients = tape.gradient(total_loss, model.trainable_variables)
-        # 利用优化器，对权重矩阵更新梯度(应用梯度下降)
         optimizer.apply_gradients(zip(gradients, model.trainable_variables))
         tf.print("=> STEP %4d   lr: %.6f   giou_loss: %4.2f   conf_loss: %4.2f   "
                  "prob_loss: %4.2f   total_loss: %4.2f" %(global_steps, optimizer.lr.numpy(),
@@ -352,11 +342,9 @@ if __name__=='__main__':
     if os.path.exists(logdir): shutil.rmtree(logdir)
     writer = tf.summary.create_file_writer(logdir)
     # 构建yolov3网络
-    # model = yolov3_subclass.build_yolov3()
-    model = yolov3.build_yolov3()         
+    model = yolov3.build_yolov3()       # yolov3_subclass.build_yolov3()
     # model.load_weights("./weight/17_epoch_yolov3.weights")
-    print(model.summary())
-    # 定义优化器
+    # 打印模型结构  print(model.summary())
     optimizer = tf.keras.optimizers.Adam()
     # 定义训练参数
     steps_per_epoch = len(trainset)
