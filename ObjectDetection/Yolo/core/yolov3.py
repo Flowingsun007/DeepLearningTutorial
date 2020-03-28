@@ -98,7 +98,7 @@ def darknet53(input_data):
 def YOLOv3(input_layer):
     """YOLOV3网络主体"""
     route_1, route_2, conv = darknet53(input_layer)
-
+    # print('route_1, route_2, conv >>>> shape :', route_1.shape, route_2.shape, conv.shape) # (batch_size, 52, 52, 256) (batch_size, 26, 26, 512) (batch_size, 13, 13, 1024)
     conv = convolutional(conv, (1, 1, 1024,  512))
     conv = convolutional(conv, (3, 3,  512, 1024))
     conv = convolutional(conv, (1, 1, 1024,  512))
@@ -135,7 +135,8 @@ def YOLOv3(input_layer):
 
     conv_master = convolutional(conv, (3, 3, 128, 256))
     master = convolutional(conv_master, (1, 1, 256, 3*(NUM_CLASS +5)), activate=False, bn=False)
-    print('master.shape, branch_2.shape, branch_1.shape', master.shape, branch_2.shape, branch_1.shape)
+    # print('master.shape, branch_2.shape, branch_1.shape', master.shape, branch_2.shape, branch_1.shape) 
+    # (None, 52, 52, 75) (None, 26, 26, 75) (None, 13, 13, 75)
     return [master, branch_2, branch_1]
 
 
@@ -159,6 +160,18 @@ def build_yolov3():
     input_tensor = tf.keras.layers.Input([416, 416, 3])
     output_tensor = YOLOv3(input_tensor)
     model = tf.keras.Model(input_tensor, output_tensor)
+    return model
+
+
+def build_for_test():
+    """构建测试和验证的yolo模型"""
+    inputs = tf.keras.layers.Input([416, 416, 3])
+    feature_maps = YOLOv3(inputs)
+    outputs = []
+    for i, feature_map in enumerate(feature_maps):
+        bbox_tensor = decode(feature_map, i)
+        outputs.append(bbox_tensor)
+    model = tf.keras.Model(inputs, outputs)
     return model
 
 
@@ -289,7 +302,7 @@ def compute_loss(pred, conv, label, bboxes, i=0):
     respond_bbox  = label[:, :, :, :, 4:5]
     label_prob    = label[:, :, :, :, 5:]
 
-    print('label_xywh x,y,w,h >>> pred_xywh  x,y,w,h', label_xywh[0,0,0,0,0:4], pred_xywh[0,0,0,0,0:4])
+    # print('x,y,w,h >> anchor_xywh;pred_xywh;truth_xywh', label_xywh[0,0,0,0,0:4], pred_xywh[0,0,0,0,0:4], bboxes[0,0,0:4])
 
     # 计算giou损失(预测box之间和anchor box之间)
     giou = tf.expand_dims(bbox_giou(pred_xywh, label_xywh), axis=-1)
@@ -312,6 +325,6 @@ def compute_loss(pred, conv, label, bboxes, i=0):
     giou_loss = tf.reduce_mean(tf.reduce_sum(giou_loss, axis=[1,2,3,4]))
     conf_loss = tf.reduce_mean(tf.reduce_sum(conf_loss, axis=[1,2,3,4]))
     prob_loss = tf.reduce_mean(tf.reduce_sum(prob_loss, axis=[1,2,3,4]))
-    print('giou_loss, conf_loss, prob_loss >>>>>>>>>>>>>>>> ',giou_loss, conf_loss, prob_loss)
+    # print('giou_loss, conf_loss, prob_loss >>>>>>>>>>>>>>>> ',giou_loss, conf_loss, prob_loss)
     return giou_loss, conf_loss, prob_loss
 

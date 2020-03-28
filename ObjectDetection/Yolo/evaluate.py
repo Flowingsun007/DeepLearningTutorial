@@ -3,9 +3,9 @@ import os
 import shutil
 import numpy as np
 import tensorflow as tf
-import core.utils as utils
+from core import utils,yolov3
 from core.config import cfg
-from core.yolov3 import YOLOv3, decode
+
 
 print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
 for gpu in tf.config.experimental.list_physical_devices('GPU'):
@@ -28,18 +28,9 @@ def evaluate(model_path):
     os.mkdir(cfg.TEST.DECTECTED_IMAGE_PATH)
 
     # Build Model
-    input_layer  = tf.keras.layers.Input([INPUT_SIZE, INPUT_SIZE, 3])
-    feature_maps = YOLOv3(input_layer)
-
-    bbox_tensors = []
-    for i, fm in enumerate(feature_maps):
-        bbox_tensor = decode(fm, i)
-        bbox_tensors.append(bbox_tensor)
-
-    model = tf.keras.Model(input_layer, bbox_tensors)
+    model = yolov3.build_for_test()
     model.load_weights(model_path)
-    # 加载利用darknet训练的权重文件，需要用utils.load_weights
-    # utils.load_weights(model, "./weight/yolov3-voc_10000.weights")
+    # utils.load_weights(model, "./weight/yolov3-voc_10000.weights") # 加载利用darknet训练的权重文件，需要用utils.load_weights
     print(model.summary())
 
     with open(cfg.TEST.ANNOT_PATH, 'r') as annotation_file:
@@ -98,5 +89,5 @@ def evaluate(model_path):
 
 
 if __name__=='__main__':
-    model_path = '7_epoch_yolov3_weights'
+    model_path = './weight/60_epoch_yolov3_weights'
     evaluate(model_path)

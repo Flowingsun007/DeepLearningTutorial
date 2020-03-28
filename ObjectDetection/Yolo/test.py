@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import core.utils as utils
 import tensorflow as tf
+from core import yolov3
 from core.yolov3 import YOLOv3, decode
 import time
 from PIL import Image
@@ -12,10 +13,7 @@ tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 
 def test_image(image_path, model_path):
-    input_size   = 416
-    input_layer  = tf.keras.layers.Input([input_size, input_size, 3])
-    feature_maps = YOLOv3(input_layer)
-
+    input_size = 416
     original_image      = cv2.imread(image_path)
     original_image      = cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB)
     original_image_size = original_image.shape[:2]
@@ -23,14 +21,8 @@ def test_image(image_path, model_path):
     image_data = utils.image_preporcess(np.copy(original_image), [input_size, input_size])
     image_data = image_data[np.newaxis, ...].astype(np.float32)
 
-    bbox_tensors = []
-    for i, fm in enumerate(feature_maps):
-        bbox_tensor = decode(fm, i)
-        bbox_tensors.append(bbox_tensor)
-
-    model = tf.keras.Model(input_layer, bbox_tensors)
-    # 加载tf  model:     model.load_weights(model_path);
-    # 加载darknet model: utils.load_weights(model, model_path)
+    model = yolov3.build_for_test()
+    # 加载tf  model:     model.load_weights(model_path);加载darknet model: utils.load_weights(model, model_path)
     utils.load_weights(model, model_path)
     model.summary()
     start_time = time.time()
@@ -53,15 +45,7 @@ def test_video(video_path, model_path):
     num_classes     = 80
     input_size      = 416
 
-    input_layer  = tf.keras.layers.Input([input_size, input_size, 3])
-    feature_maps = YOLOv3(input_layer)
-
-    bbox_tensors = []
-    for i, fm in enumerate(feature_maps):
-        bbox_tensor = decode(fm, i)
-        bbox_tensors.append(bbox_tensor)
-
-    model = tf.keras.Model(input_layer, bbox_tensors)
+    model = yolov3.build_for_test()
     # model.load_weights(model_path)
     utils.load_weights(model, model_path)
     # model.summary()
@@ -98,13 +82,13 @@ def test_video(video_path, model_path):
 
 
 if __name__=='__main__':
+
     model_path = "./weight/yolov3.weights"  #  ./weight/30_epoch_yolov3_weights
 
     # 测试图片
-    test_image("./resource/kite.jpg", model_path)
+    # test_image("./resource/kite.jpg", model_path)
 
     # 测试视频
-    # video_path = "./resource/road.mp4"
-    # test_video(video_path, model_path)
+    test_video("./resource/road.mp4", model_path)
 
 
