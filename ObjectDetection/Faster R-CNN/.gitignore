@@ -1,4 +1,13 @@
-# Ignore everything in this directory
-*
-# Except this file
-!.gitignore
+# Data files and directories common in repo root
+COCO2017/
+tmp/
+weights/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+*.ipynb
+.ipynb_checkpoints
