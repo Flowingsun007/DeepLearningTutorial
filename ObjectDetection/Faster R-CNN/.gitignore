@@ -1,7 +1,5 @@
 # Data files and directories common in repo root
-COCO2017/
 tmp/
-weights/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
