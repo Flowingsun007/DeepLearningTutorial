@@ -91,14 +91,14 @@ def darknet53(input_data):
 
     for i in range(4):
         input_data = residual_block(input_data, 1024, 512, 1024)
-    # print('output_1.shape,output_2.shape,output_3.shape >>>>>>>>>>> ', route_1.shape,route_2.shape,input_data.shape)
+    # print('output_1.shape,output_2.shape,output_3.shape >>>>>>>>>>> ', route_1.shape,route_2.shape,input_data.shape) # (None, 52, 52, 256) (None, 26, 26, 512) (None, 13, 13, 1024)
     return route_1, route_2, input_data
 
 
-def YOLOv3(input_layer):
+def YOLOv3(input_layer, class_num=NUM_CLASS):
     """YOLOV3网络主体"""
     route_1, route_2, conv = darknet53(input_layer)
-    # print('route_1, route_2, conv >>>> shape :', route_1.shape, route_2.shape, conv.shape) # (batch_size, 52, 52, 256) (batch_size, 26, 26, 512) (batch_size, 13, 13, 1024)
+    # print('route_1, route_2, conv >>>> shape :', route_1.shape, route_2.shape, conv.shape) # (None, 52, 52, 256) (None, 26, 26, 512) (None, 13, 13, 1024)
     conv = convolutional(conv, (1, 1, 1024,  512))
     conv = convolutional(conv, (3, 3,  512, 1024))
     conv = convolutional(conv, (1, 1, 1024,  512))
@@ -106,7 +106,7 @@ def YOLOv3(input_layer):
     conv = convolutional(conv, (1, 1, 1024,  512))
 
     conv_branch_1 = convolutional(conv, (3, 3, 512, 1024))
-    branch_1 = convolutional(conv_branch_1, (1, 1, 1024, 3*(NUM_CLASS + 5)), activate=False, bn=False)
+    branch_1 = convolutional(conv_branch_1, (1, 1, 1024, 3*(class_num + 5)), activate=False, bn=False)
 
     conv = convolutional(conv, (1, 1,  512,  256))
     conv = upsample(conv)
@@ -120,7 +120,7 @@ def YOLOv3(input_layer):
     conv = convolutional(conv, (1, 1, 512, 256))
 
     conv_branch_2 = convolutional(conv, (3, 3, 256, 512))
-    branch_2 = convolutional(conv_branch_2, (1, 1, 512, 3*(NUM_CLASS + 5)), activate=False, bn=False)
+    branch_2 = convolutional(conv_branch_2, (1, 1, 512, 3*(class_num + 5)), activate=False, bn=False)
 
     conv = convolutional(conv, (1, 1, 256, 128))
     conv = upsample(conv)
@@ -134,9 +134,8 @@ def YOLOv3(input_layer):
     conv = convolutional(conv, (1, 1, 256, 128))
 
     conv_master = convolutional(conv, (3, 3, 128, 256))
-    master = convolutional(conv_master, (1, 1, 256, 3*(NUM_CLASS +5)), activate=False, bn=False)
-    # print('master.shape, branch_2.shape, branch_1.shape', master.shape, branch_2.shape, branch_1.shape) 
-    # (None, 52, 52, 75) (None, 26, 26, 75) (None, 13, 13, 75)
+    master = convolutional(conv_master, (1, 1, 256, 3*(class_num +5)), activate=False, bn=False)
+    # print('master.shape, branch_2.shape, branch_1.shape', master.shape, branch_2.shape, branch_1.shape)  # (None, 52, 52, 75) (None, 26, 26, 75) (None, 13, 13, 75)
     return [master, branch_2, branch_1]
 
 

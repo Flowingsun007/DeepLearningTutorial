@@ -14,8 +14,8 @@ COCO2017
 ├── annotations
 |    └──VOCdevkit
 |        └──instances_train2017.json
-| 			 └──instances_val2017.json
-| 			 └──...
+| 		 └──instances_val2017.json
+| 		 └──...
 └── train2017
 └── val2017
 ```
