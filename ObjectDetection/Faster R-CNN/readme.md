@@ -8,15 +8,16 @@ Faster R-CNN tensorflow2.0 implementation, totally based on [tf-eager-fasterrcnn
 **weight file download:**[**faster_rcnn.h5**](https://pan.baidu.com/s/1I5PGkpvnDSduJnngoWuktQ)
 
 ## Dataset
-download voc dataset at website:[http://cocodataset.org/#download](http://cocodataset.org/#download)。Unzip the  file to COCO2017,The directory structure is as follows: 
+download coco2017 dataset at website:[http://cocodataset.org/#download](http://cocodataset.org/#download)。Unzip the  file to COCO2017,The directory structure is as follows: 
 ```
-COCO2017 
 ├── annotations
-|    └──VOCdevkit
-|        └──instances_train2017.json
-| 		 └──instances_val2017.json
-| 		 └──...
-└── train2017
+│   ├── captions_train2017.json
+│   ├── captions_val2017.json
+│   ├── instances_train2017.json
+│   ├── instances_val2017.json
+│   ├── person_keypoints_train2017.json
+│   └── person_keypoints_val2017.json
+├── train2017
 └── val2017
 ```
 ## 
