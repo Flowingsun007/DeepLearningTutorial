@@ -1,2 +1,0 @@
-model_checkpoint_path: "1_epoch_yolov3_weights"
-all_model_checkpoint_paths: "1_epoch_yolov3_weights"

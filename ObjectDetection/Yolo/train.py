@@ -80,7 +80,7 @@ if __name__=='__main__':
     writer = tf.summary.create_file_writer(logdir)
     # 构建yolov3网络
     model = yolov3.build_yolov3()
-    # model.load_weights('./weight/60_epoch_yolov3_weights')
+    model.load_weights('./weight/60_epoch_yolov3_weights')
     # 定义优化器
     optimizer = tf.keras.optimizers.Adam()
     # 训练参数

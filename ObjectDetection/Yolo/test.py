@@ -22,11 +22,12 @@ def test_image(image_path, model_path):
     image_data = image_data[np.newaxis, ...].astype(np.float32)
 
     model = yolov3.build_for_test()
-    # 加载tf  model:     model.load_weights(model_path);加载darknet model: utils.load_weights(model, model_path)
+    # 加载tf model:model.load_weights(model_path);加载darknet model: utils.load_weights(model, model_path)
     utils.load_weights(model, model_path)
     model.summary()
     start_time = time.time()
     pred_bbox = model.predict(image_data)
+    print('pred_bbox>>>>>>>>>>>>>>>>>', pred_bbox)
     end_time = time.time()
     print("time: %.2f ms" %(1000*(end_time-start_time)))
 
@@ -42,13 +43,12 @@ def test_image(image_path, model_path):
 
 
 def test_video(video_path, model_path):
-    num_classes     = 80
     input_size      = 416
 
     model = yolov3.build_for_test()
     # model.load_weights(model_path)
     utils.load_weights(model, model_path)
-    # model.summary()
+    model.summary()
     vid = cv2.VideoCapture(video_path)
     while True:
         return_value, frame = vid.read()
@@ -83,12 +83,13 @@ def test_video(video_path, model_path):
 
 if __name__=='__main__':
 
-    model_path = "./weight/yolov3.weights"  #  ./weight/30_epoch_yolov3_weights
+    model_path = "./weight/yolov3.weights"
+    # model_path = "./weight/60_epoch_yolov3_weights"
 
     # 测试图片
-    # test_image("./resource/kite.jpg", model_path)
+    test_image("./resource/kite.jpg", model_path)
 
     # 测试视频
-    test_video("./resource/road.mp4", model_path)
+    # test_video("./resource/road.mp4", model_path)
 
 

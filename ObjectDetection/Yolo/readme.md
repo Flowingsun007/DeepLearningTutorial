@@ -25,7 +25,7 @@ wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
 wget http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar
 wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
 ```
-Unzip the tar file in data/dataset/VOC,The directory structure is as follows: 
+Unzip the tar file in data/dataset/VOC,The directory structure is as follows: 
 ```
 VOC 
 ├── test
@@ -40,7 +40,7 @@ building the path of images for training and evaluating
 ```python
 python voc_annotation.py --data_path /your/path/to/VOC
 ```
-after run voc_annotation.py,it will generate voc_train.txt and  voc_test.txt
+after run voc_annotation.py,it will generate voc_train.txt and  voc_test.txt
 ```shell
 python voc_annotation.py --data_path /your/path/to/VOC
 ```
@@ -72,4 +72,4 @@ python main.py -na
 ```shell
 utils.load_weights(model, "./weight/yolov3-voc_10000.weights")
 ```
-2.When model.sava_weights (), only tf format is supported, and .h5 will report an error
+2.When model.sava_weights (), only tf format is supported, and .h5 will report an error<br />3.Not support transfer learning yet,if you want to transfer training from coco darkent,see this project:[https://github.com/zzh8829/yolov3-tf2](https://github.com/zzh8829/yolov3-tf2)

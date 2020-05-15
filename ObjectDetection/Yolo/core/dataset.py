@@ -91,7 +91,7 @@ class Dataset(object):
 
     def random_horizontal_flip(self, image, bboxes):
         """随机水平平移"""
-        if random.random() < 0.5:
+        if random.random() < 0.2:
             _, w, _ = image.shape
             image = image[:, ::-1, :]
             bboxes[:, [0,2]] = w - bboxes[:, [2,0]]
@@ -100,7 +100,7 @@ class Dataset(object):
 
     def random_crop(self, image, bboxes):
         """随机剪裁"""
-        if random.random() < 0.5:
+        if random.random() < 0.2:
             h, w, _ = image.shape
             max_bbox = np.concatenate([np.min(bboxes[:, 0:2], axis=0), np.max(bboxes[:, 2:4], axis=0)], axis=-1)
 
@@ -123,7 +123,7 @@ class Dataset(object):
 
     def random_translate(self, image, bboxes):
         """随机旋转"""
-        if random.random() < 0.5:
+        if random.random() < 0.2:
             h, w, _ = image.shape
             max_bbox = np.concatenate([np.min(bboxes[:, 0:2], axis=0), np.max(bboxes[:, 2:4], axis=0)], axis=-1)
 
