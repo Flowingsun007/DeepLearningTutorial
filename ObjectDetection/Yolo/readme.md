@@ -37,13 +37,11 @@ VOC
          └──VOC2012 (from VOCtrainval_11-May-2012.tar)
 ```
 building the path of images for training and evaluating
-```python
-python voc_annotation.py --data_path /your/path/to/VOC
-```
-after run voc_annotation.py,it will generate voc_train.txt and  voc_test.txt
 ```shell
 python voc_annotation.py --data_path /your/path/to/VOC
 ```
+after run voc_annotation.py,it will generate voc_train.txt and  voc_test.txt
+
 
 
 ### Train
@@ -72,4 +70,5 @@ python main.py -na
 ```shell
 utils.load_weights(model, "./weight/yolov3-voc_10000.weights")
 ```
-2.When model.sava_weights (), only tf format is supported, and .h5 will report an error<br />3.Not support transfer learning yet,if you want to transfer training from coco darkent,see this project:[https://github.com/zzh8829/yolov3-tf2](https://github.com/zzh8829/yolov3-tf2)
+2.When model.sava_weights (), only tf format is supported, and .h5 will report an error<br />
+3.Not support replace backbone yet, It could be added next time!
