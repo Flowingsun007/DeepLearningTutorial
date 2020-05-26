@@ -1,6 +1,9 @@
-# Ignore everything in this directory
-*
-
+dataset/VOCdevkit
+dataset/voc.txt
+weight/*
 *__pycache__
-# Except this file
-!.gitignore
+### IntelliJ IDEA ###
+*.idea
+
+### VS Code ###
+.vscode/
