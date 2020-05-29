@@ -3,9 +3,10 @@
 
 *.h5
 *.pdf
-
+*.pth
+*__pycache__
 ### IntelliJ IDEA ###
-.idea
+*.idea
 *.iws
 *.iml
 *.ipr

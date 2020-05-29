@@ -173,6 +173,12 @@
 - [普通程序员如何正确学习人工智能方向的知识？](https://www.zhihu.com/question/51039416)
 - [有哪些优秀的深度学习入门书籍？需要先学习机器学习吗？](https://www.zhihu.com/question/36675272/answer/603847513)
 - [给妹纸的深度学习教学(0)——从这里出发](https://zhuanlan.zhihu.com/p/28462089)
+【梯度下降、神经元和神经网络】
+- [梯度下降算法（附代码实现)](https://zhuanlan.zhihu.com/p/125744910)
+- [神经网络为什么可以（理论上）拟合任何函数？](https://www.zhihu.com/question/268384579/answer/540793202)
+- [一文弄懂神经网络中的反向传播法](https://zhuanlan.zhihu.com/p/33668471)
+- [道理我都懂，但是神经网络反向传播时的梯度到底怎么求？](https://zhuanlan.zhihu.com/p/25202034)
+
 ### 3.2.2 视频公开课
 **3Blue1Brown**
 
@@ -275,7 +281,7 @@
 - 【github】[OpenCV官方Demo](https://github.com/opencv/opencv/tree/master/samples/cpp)
 - [【CV实战】OpenCV—Hello world代码示例](https://zhuanlan.zhihu.com/p/58028543)
 - [【CV实战】Ubuntu18.04源码编译安装opencv-3.4.X+测试demo](https://zhuanlan.zhihu.com/p/93356275)
-
+- [【github】「画像処理100本ノック」中文版本！为图像处理初学者设计的 100 个问题](https://github.com/gzr2017/ImageProcessing100Wen))
 ---
 
 # 4.公开数据集
