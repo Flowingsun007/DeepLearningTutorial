@@ -5,8 +5,8 @@
 如果你是深度学习/卷积神经网络的初学者，且对图像分类、目标检测、分割等CV相关领域感兴趣，请继续<br />**↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓**<br />刚刚入门DL，CV，CNN？或者了解各种理论后仍不知从何下手 ？是不是对于各个网络模型的代码实现一脸懵逼？如果是，那么这个项目就是为你准备的。**Talk is cheap,show me the code!本项目致力于图像分类网络(经典CNN)、目标检测、实例分割等一切CV相关领域的论文/网络解读 + 代码构建 + 模型训练**(在1.和2.部分)；在第3.学习资源部分里分享深度学习，计算机视觉相关的文章、视频公开课、开源框架、项目和平台等和一切**深度学习相关的优秀资源**；第4部分是tensorflow和pytorch上的**公开数据集**<br />好东西要共享，Ideas worth spreading！项目不定期更新。<br />**目录如下：**
 
 - [介绍](https://github.com/Flowingsun007/DeepLearningTutorial#%E4%BB%8B%E7%BB%8D)
-- [1.Image Classification](https://github.com/Flowingsun007/DeepLearningTutorial#1image-classification)
-- [2.Object Detection](https://github.com/Flowingsun007/DeepLearningTutorial#2object-detection)
+- [1.图像分类Image Classification](https://github.com/Flowingsun007/DeepLearningTutorial#1图像分类image-classification)
+- [2.目标检测Object Detection](https://github.com/Flowingsun007/DeepLearningTutorial#2目标检测object-detection)
   - [2.1 One-stage](https://github.com/Flowingsun007/DeepLearningTutorial#21-one-stage)
   - [2.2 Two-stage](https://github.com/Flowingsun007/DeepLearningTutorial#22-two-stage)
   - [2.3 资源分享](https://github.com/Flowingsun007/DeepLearningTutorial#23-资源分享)
@@ -40,7 +40,7 @@
 
 ---
 
-# 1.Image Classification
+# 1.图像分类Image Classification
 | 项目✓ | 论文✓ | 网络✓ | 模型训练✓ |
 | :---: | :---: | :---: | :---: |
 | **LeNet** | [1998](https://ieeexplore.ieee.org/document/726791?reload=true&arnumber=726791)            [论文解读](https://zhuanlan.zhihu.com/p/34311419) | [LeNet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/network/LeNet.py) | [train_lenet.py](https://github.com/Flowingsun007/DeepLearningTutorial/blob/master/ImageClassification/train_lenet.py) |
@@ -57,7 +57,7 @@
 
 ---
 
-# 2.Object Detection
+# 2.目标检测Object Detection
 ## 2.1 One-stage
 | 项目 | 论文 | 网络 | 模型训练 |
 | :---: | :---: | :---: | :---: |
@@ -93,7 +93,12 @@
 
 - [目标检测相关论文deep_learning_object_detection](https://github.com/hoya012/deep_learning_object_detection)
 - [目标检测发展、论文综述](https://handong1587.github.io/deep_learning/2015/10/09/object-detection.html)
+- [干货 | 目标检测入门，看这篇就够了（已更完）](https://zhuanlan.zhihu.com/p/34142321)
 - [awesome-object-detection](https://github.com/amusi/awesome-object-detection)
+- [【目标检测论文解读】ObjectDetection—R-CNN](https://zhuanlan.zhihu.com/p/115060099)
+- [【目标检测论文解读】ObjectDetection—Fast R-CNN](https://zhuanlan.zhihu.com/p/121658700)
+- [【目标检测论文解读】ObjectDetection—Faster R-CNN](https://zhuanlan.zhihu.com/p/121676212)
+- [【目标检测论文解读】ObjectDetection—YoloV3论文+代码+资源合集](https://zhuanlan.zhihu.com/p/122229193)
 
 **【发展综述】**
 
@@ -104,11 +109,15 @@
 - [**《Deep Learning for Generic Object Detection: A Survey》**](https://arxiv.org/abs/1809.02165)
 - [**《Recent Advances in Object Detection in the Age of Deep Convolutional Neural Networks》**](https://arxiv.org/abs/1809.03193)
 ### 2.3.3 代码实战
-
+#### 目标检测ObjectDetection
+- [【github】Detectron2——facebook开源目标检测框架](https://github.com/facebookresearch/detectron2)
+- [【github】mmdetection——商汤科技+香港中文大学开源目标检测框架](https://github.com/open-mmlab/mmdetection)
 - [【github】TensorFlow2.0-Examples](https://github.com/YunYang1994/TensorFlow2.0-Examples)
 - [【github】awesome-object-detection](https://github.com/amusi/awesome-object-detection)
 - [【目标检测实战】Darknet—yolov3模型训练（VOC数据集)](https://zhuanlan.zhihu.com/p/92141879)
 - [【目标检测实战】Pytorch—SSD模型训练（VOC数据集）](https://zhuanlan.zhihu.com/p/92154612)
+
+
 
 ---
 
@@ -229,16 +238,6 @@
 - [【论文解读+代码实战】CNN深度卷积神经网络-GoogLeNet](https://zhuanlan.zhihu.com/p/108414921)
 - [【论文解读+代码实战】CNN深度卷积神经网络-ResNet](https://zhuanlan.zhihu.com/p/108708768)
 - [【论文解读+代码实战】CNN深度卷积神经网络-DenseNet](https://zhuanlan.zhihu.com/p/109269085)
-#### 目标检测ObjectDetection
-- [【github】Detectron2——facebook开源目标检测框架](https://github.com/facebookresearch/detectron2)
-- [【github】mmdetection——商汤科技+香港中文大学开源目标检测框架](https://github.com/open-mmlab/mmdetection)
-- [干货 | 目标检测入门，看这篇就够了（已更完）](https://zhuanlan.zhihu.com/p/34142321)
-- [【目标检测论文解读】ObjectDetection—R-CNN](https://zhuanlan.zhihu.com/p/115060099)
-- [【目标检测论文解读】ObjectDetection—Fast R-CNN](https://zhuanlan.zhihu.com/p/121658700)
-- [【目标检测论文解读】ObjectDetection—Faster R-CNN](https://zhuanlan.zhihu.com/p/121676212)
-- [【目标检测论文解读】ObjectDetection—YoloV3论文+代码+资源合集](https://zhuanlan.zhihu.com/p/122229193)
-- [【目标检测实战】Darknet—yolov3模型训练（VOC数据集)](https://zhuanlan.zhihu.com/p/92141879)
-- [【目标检测实战】Pytorch—SSD模型训练（VOC数据集）](https://zhuanlan.zhihu.com/p/92154612)
 ### 3.2.4  开源工具
 #### 深度学习框架
 
