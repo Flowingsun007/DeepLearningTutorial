@@ -67,7 +67,7 @@ def test_googlenet(weight_path, batch_size):
 
 if __name__ == '__main__':
     # 训练
-    # train_googlenet(256, 20)
+    train_googlenet(256, 20)
 
     # 测试
-    test_googlenet('./weight/20_epoch_googlenet_weight.h5', 10000)  # acc 90.7
+    # test_googlenet('./weight/20_epoch_googlenet_weight.h5', 10000)  # acc 90.7

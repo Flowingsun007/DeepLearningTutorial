@@ -24,7 +24,8 @@
     - [3.2.2 视频公开课](https://github.com/Flowingsun007/DeepLearningTutorial#322-%E8%A7%86%E9%A2%91%E5%85%AC%E5%BC%80%E8%AF%BE)
     - [3.2.3 学习资源](https://github.com/Flowingsun007/DeepLearningTutorial#323-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90)
       - [书PDF](https://github.com/Flowingsun007/DeepLearningTutorial#书PDF)
-      - [卷积神经网络](https://github.com/Flowingsun007/DeepLearningTutorial#卷积神经网络)
+      - [卷积神经网络CNN](https://github.com/Flowingsun007/DeepLearningTutorial#卷积神经网络CNN)
+      - [目标检测Object Detection](https://github.com/Flowingsun007/DeepLearningTutorial#目标检测ObjectDetection)
     - [3.2.4  开源工具](https://www.yuque.com/zhaoluyang/ai/vgn4pv#hgkH7)
       - [深度学习框架](https://github.com/Flowingsun007/DeepLearningTutorial#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6)
       - [支撑工具](https://github.com/Flowingsun007/DeepLearningTutorial#%E6%94%AF%E6%92%91%E5%B7%A5%E5%85%B7)
@@ -90,7 +91,7 @@
 ### 2.3.2 论文
 **【论文合集】**
 
-- 目标检测相关论文[deep_learning_object_detection](https://github.com/hoya012/deep_learning_object_detection)
+- [目标检测相关论文deep_learning_object_detection](https://github.com/hoya012/deep_learning_object_detection)
 - [目标检测发展、论文综述](https://handong1587.github.io/deep_learning/2015/10/09/object-detection.html)
 - [awesome-object-detection](https://github.com/amusi/awesome-object-detection)
 
@@ -104,8 +105,8 @@
 - [**《Recent Advances in Object Detection in the Age of Deep Convolutional Neural Networks》**](https://arxiv.org/abs/1809.03193)
 ### 2.3.3 代码实战
 
-- 【github】[TensorFlow2.0-Examples](https://github.com/YunYang1994/TensorFlow2.0-Examples)
-- 【github】[awesome-object-detection](https://github.com/amusi/awesome-object-detection)
+- [【github】TensorFlow2.0-Examples](https://github.com/YunYang1994/TensorFlow2.0-Examples)
+- [【github】awesome-object-detection](https://github.com/amusi/awesome-object-detection)
 - [【目标检测实战】Darknet—yolov3模型训练（VOC数据集)](https://zhuanlan.zhihu.com/p/92141879)
 - [【目标检测实战】Pytorch—SSD模型训练（VOC数据集）](https://zhuanlan.zhihu.com/p/92154612)
 
@@ -124,7 +125,7 @@
 - [机器学习该怎么入门？](https://www.zhihu.com/question/20691338)
 ### 3.1.2 公开课
 
-- **加州理工学院**[**Learning from data(费曼奖得主Yaser Abu-Mostafa教授)**](http://work.caltech.edu/lectures.html)
+- **加州理工学院**[Learning from data(费曼奖得主Yaser Abu-Mostafa教授)](http://work.caltech.edu/lectures.html)
 - **谷歌** [Google 制作的节奏紧凑、内容实用的机器学习简介课程](https://developers.google.com/machine-learning/crash-course/)
 - **林軒田**[[機器學習基石]Machine Learning Foundations——哔哩哔哩](https://www.bilibili.com/video/av1624332?p=2)
 
@@ -173,10 +174,12 @@
 - [普通程序员如何正确学习人工智能方向的知识？](https://www.zhihu.com/question/51039416)
 - [有哪些优秀的深度学习入门书籍？需要先学习机器学习吗？](https://www.zhihu.com/question/36675272/answer/603847513)
 - [给妹纸的深度学习教学(0)——从这里出发](https://zhuanlan.zhihu.com/p/28462089)
-【梯度下降、神经元和神经网络】
-- [梯度下降算法（附代码实现)](https://zhuanlan.zhihu.com/p/125744910)
+
+【梯度下降、深度神经网络、反向传播】
+- [【深度学习理论】一文搞透梯度下降Gradient descent](https://zhuanlan.zhihu.com/p/144478956)
+- [【深度学习理论】纯公式手推+代码撸——神经网络的反向传播+梯度下降](https://zhuanlan.zhihu.com/p/145538299)
+- [【深度学习理论】一文搞透pytorch中的tensor、autograd、反向传播和计算图](https://zhuanlan.zhihu.com/p/145353262)
 - [神经网络为什么可以（理论上）拟合任何函数？](https://www.zhihu.com/question/268384579/answer/540793202)
-- [一文弄懂神经网络中的反向传播法](https://zhuanlan.zhihu.com/p/33668471)
 - [道理我都懂，但是神经网络反向传播时的梯度到底怎么求？](https://zhuanlan.zhihu.com/p/25202034)
 
 ### 3.2.2 视频公开课
@@ -215,20 +218,27 @@
 《[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)》
 > 中文版：[https://tigerneil.gitbooks.io/neural-networks-and-deep-learning-zh/content/](https://tigerneil.gitbooks.io/neural-networks-and-deep-learning-zh/content/)
 
-#### 卷积神经网络
+#### 卷积神经网络CNN
 
 - [能否对卷积神经网络工作原理做一个直观的解释？](https://www.zhihu.com/question/39022858)
 - [CNN 入门讲解专栏阅读顺序以及论文研读视频集合](https://zhuanlan.zhihu.com/p/33855959)
 - [CNN系列模型发展简述（附github代码——已全部跑通）](https://zhuanlan.zhihu.com/p/66215918)
+- [【论文解读+代码实战】CNN深度卷积神经网络-AlexNet](https://zhuanlan.zhihu.com/p/107660669)
+- [【论文解读+代码实战】CNN深度卷积神经网络-VGG](https://zhuanlan.zhihu.com/p/107884876)
+- [【论文解读+代码实战】CNN深度卷积神经网络-Network in Network](https://zhuanlan.zhihu.com/p/108235295)
+- [【论文解读+代码实战】CNN深度卷积神经网络-GoogLeNet](https://zhuanlan.zhihu.com/p/108414921)
+- [【论文解读+代码实战】CNN深度卷积神经网络-ResNet](https://zhuanlan.zhihu.com/p/108708768)
+- [【论文解读+代码实战】CNN深度卷积神经网络-DenseNet](https://zhuanlan.zhihu.com/p/109269085)
+#### 目标检测ObjectDetection
+- [【github】Detectron2——facebook开源目标检测框架](https://github.com/facebookresearch/detectron2)
+- [【github】mmdetection——商汤科技+香港中文大学开源目标检测框架](https://github.com/open-mmlab/mmdetection)
 - [干货 | 目标检测入门，看这篇就够了（已更完）](https://zhuanlan.zhihu.com/p/34142321)
-- [详解反向传播算法(上)](https://zhuanlan.zhihu.com/p/25081671)
-- [【论文解读】CNN深度卷积神经网络-AlexNet](https://zhuanlan.zhihu.com/p/107660669)
-- [【论文解读】CNN深度卷积神经网络-VGG](https://zhuanlan.zhihu.com/p/107884876)
-- [【论文解读】CNN深度卷积神经网络-Network in Network](https://zhuanlan.zhihu.com/p/108235295)
-- [【论文解读】CNN深度卷积神经网络-GoogLeNet](https://zhuanlan.zhihu.com/p/108414921)
-- [【论文解读】CNN深度卷积神经网络-ResNet](https://zhuanlan.zhihu.com/p/108708768)
-- [【论文解读】CNN深度卷积神经网络-DenseNet](https://zhuanlan.zhihu.com/p/109269085)
-
+- [【目标检测论文解读】ObjectDetection—R-CNN](https://zhuanlan.zhihu.com/p/115060099)
+- [【目标检测论文解读】ObjectDetection—Fast R-CNN](https://zhuanlan.zhihu.com/p/121658700)
+- [【目标检测论文解读】ObjectDetection—Faster R-CNN](https://zhuanlan.zhihu.com/p/121676212)
+- [【目标检测论文解读】ObjectDetection—YoloV3论文+代码+资源合集](https://zhuanlan.zhihu.com/p/122229193)
+- [【目标检测实战】Darknet—yolov3模型训练（VOC数据集)](https://zhuanlan.zhihu.com/p/92141879)
+- [【目标检测实战】Pytorch—SSD模型训练（VOC数据集）](https://zhuanlan.zhihu.com/p/92154612)
 ### 3.2.4  开源工具
 #### 深度学习框架
 
@@ -243,9 +253,17 @@
 **Tensorflow入门**
 
 - [Tensorflow官方Tutorials](https://tensorflow.google.cn/tutorials)
+- [动手学深度学习-Tensorflow2.0版](https://trickygo.github.io/Dive-into-DL-TensorFlow2.0/#/)
 - [在线pdf:《简单粗暴 TensorFlow 2》](https://tf.wiki/)
-- 【github】[TensorFlow-Course](https://github.com/machinelearningmindset/TensorFlow-Course)
-- 【github】[TensorFlow2.0-Examples](https://github.com/YunYang1994/TensorFlow2.0-Examples)
+- [【github】TensorFlow-Course](https://github.com/machinelearningmindset/TensorFlow-Course)
+- [【github】TensorFlow2.0-Examples](https://github.com/YunYang1994/TensorFlow2.0-Examples)
+- [【github】eat_tensorflow2_in_30_days](https://github.com/lyhue1991/eat_tensorflow2_in_30_days)
+
+**Pytorch入门**
+- [Pytorch官方Tutorials](https://pytorch.org/tutorials/)
+- [动手学深度学习-Pytorch版](http://tangshusen.me/Dive-into-DL-PyTorch/#/)
+- [《pytorch handbook》—【github标星11.6k】](https://github.com/zergtant/pytorch-handbook)    
+
 #### 支撑工具
 
 - [Cuda下载——GPU通用计算框架](https://developer.nvidia.com/cuda-toolkit-archive)
@@ -253,9 +271,21 @@
 - [Nvidia Driver下载——Nvidia显卡驱动](https://www.nvidia.cn/Download/index.aspx?lang=cn#)
 - [Nvidia TensorRT下载——Nvidia高性能深度学习推理加深SDK](https://developer.nvidia.com/tensorrt)
 - [Anaconda——虚拟编程环境管理](https://www.anaconda.com/)
+
+#####标注软件
+- [【github】CasiaLabeler——支持实例分割车道线检测多边形标注等](https://github.com/wkentaro/labelme)
+- [【github】labelme——python开发的多边形标注工具](https://github.com/wkentaro/labelme)
+
+#####模型可视化
 - [NN-SVG——在线神经网络模型画图工具](http://alexlenail.me/NN-SVG/index.html)
 - [Netron——开源神经网络模型画图工具](https://github.com/lutzroeder/netron)
 - [PlotNeuralNet——开源神经网络绘图工具](https://github.com/HarisIqbal88/PlotNeuralNet)
+
+#####性能优化和部署
+- [【github】torch2trt——易于使用的PyTorch到TensorRT转换器](https://github.com/NVIDIA-AI-IOT/torch2trt)
+- [【github】ncnn——腾讯出品的针对移动平台优化的高性能神经网络推理框架](https://github.com/Tencent/ncnn)
+- [【github】onnx——跨框架机器学习互操作性的开放标准](https://github.com/onnx/onnx)
+- [【github】tensorrt——一个C ++库，用于在NVIDIA GPU和深度学习加速器上进行高性能推理。](https://github.com/NVIDIA/TensorRT)
 #### 其他资源
 
 - [FFmpeg——有关视频、图片处理的一切](http://ffmpeg.org/)
@@ -278,7 +308,7 @@
 
 **代码实战**
 
-- 【github】[OpenCV官方Demo](https://github.com/opencv/opencv/tree/master/samples/cpp)
+- [【github】OpenCV官方Demo](https://github.com/opencv/opencv/tree/master/samples/cpp)
 - [【CV实战】OpenCV—Hello world代码示例](https://zhuanlan.zhihu.com/p/58028543)
 - [【CV实战】Ubuntu18.04源码编译安装opencv-3.4.X+测试demo](https://zhuanlan.zhihu.com/p/93356275)
 - [【github】「画像処理100本ノック」中文版本！为图像处理初学者设计的 100 个问题](https://github.com/gzr2017/ImageProcessing100Wen))
