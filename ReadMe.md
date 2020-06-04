@@ -140,11 +140,11 @@
 
 **网易**<br />[![](https://camo.githubusercontent.com/eea35fe0589e9d1b64c41af9bf73be0dbf162201/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032302f706e672f3231363931342f313538343432353633383431312d35386561636636342d646366352d343333322d393435622d6637393366343562346637302e706e6723616c69676e3d6c65667426646973706c61793d696e6c696e65266865696768743d323530266f726967696e4865696768743d323530266f726967696e57696474683d3435302673697a653d30267374617475733d646f6e65267374796c653d6e6f6e652677696474683d343530#align=left&display=inline&height=250&originHeight=250&originWidth=450&status=done&style=none&width=450)](https://study.163.com/course/introduction/1004570029.htm)<br />[吴恩达机器学习](https://study.163.com/course/introduction/1004570029.htm)<br />网易杭州研究院<br />Google Brain 和百度大脑的发起人、Coursera 创始人吴恩达（Andrew Ng）亲授，在全球有百万选课量，主要讲述人工智能中基础的机...[查看详情](https://study.163.com/course/introduction/1004570029.htm)<br />中文教学的优质课程加上贴近生活的案例，你将在学习AI的道路上跑得更快！<br />[![](https://camo.githubusercontent.com/f09e216a5474a81adf2212e5a5e1900385fb0218/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032302f706e672f3231363931342f313538343432353633383532352d30666138366238632d643039372d346335632d383835642d3634313630386232346562302e706e6723616c69676e3d6c65667426646973706c61793d696e6c696e65266865696768743d323439266f726967696e4865696768743d323530266f726967696e57696474683d3435302673697a653d30267374617475733d646f6e65267374796c653d6e6f6e652677696474683d343439#align=left&display=inline&height=250&originHeight=250&originWidth=450&status=done&style=none&width=450)](https://study.163.com/course/introduction/1208946807.htm)<br />[李宏毅机器学习中文课程](https://study.163.com/course/introduction/1208946807.htm)<br />网易云课堂IT互联网<br />来自台湾大学李宏毅老师的课程，以精灵宝可梦作为课程案例，生动地为你讲解机器学习。同时，他还设计了六项作业和一项期末项目，...[查看详情](https://study.163.com/course/introduction/1208946807.htm)<br />[机器学习及其深层与结构化](https://study.163.com/course/introduction/1208991809.htm)<br />网易云课堂IT互联网<br />台湾大学李宏毅老师在《机器学习》基础上提供的《机器学习及其深度与结构化》课程，为你深入解析深度学习与结构学习。[查看详情](https://study.163.com/course/introduction/1208991809.htm)<br />[李宏毅线性代数中文课程](https://study.163.com/course/introduction/1208956807.htm)<br />网易云课堂IT互联网<br />来自台湾大学李宏毅老师的课程，专为对人工智能感兴趣，但是数学基础薄弱的同学设计，让你深刻理解数学概念，学会在人工智能应用...[查看详情](https://study.163.com/course/introduction/1208956807.htm)<br />[机器学习前沿技术](https://study.163.com/course/introduction/1209400866.htm)<br />网易云课堂IT互联网<br />机器学习的下一步是什么？机器能不能知道“我不知道”、“我为什么知道”，机器的错觉，终身学习<br />[查看详情](https://study.163.com/course/introduction/1209400866.htm)
 ### 3.1.3 学习资源
-**书**
+**【书】**
 
 - [周志华《机器学习》公式推导在线阅读](https://datawhalechina.github.io/pumpkin-book/#/)
 
-**知乎**
+**【知乎】**
 
 - [机器学习科研的十年](https://zhuanlan.zhihu.com/p/74249758)
 - [机器学习最好的课程是什么？](https://www.zhihu.com/question/37031588/answer/723461499)
@@ -163,7 +163,7 @@
 - [SVM教程：支持向量机的直观理解](https://zhuanlan.zhihu.com/p/40857202)
 - [支持向量机(SVM)是什么意思？](https://www.zhihu.com/question/21094489/answer/86273196)
 
-**Github**
+**【Github】**
 
 - [Machine-Learning-Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials)
 - [李航《统计学习方法》——代码实现](https://github.com/fengdu78/lihang-code)
@@ -184,7 +184,7 @@
 - [有哪些优秀的深度学习入门书籍？需要先学习机器学习吗？](https://www.zhihu.com/question/36675272/answer/603847513)
 - [给妹纸的深度学习教学(0)——从这里出发](https://zhuanlan.zhihu.com/p/28462089)
 
-【梯度下降、深度神经网络、反向传播】
+**【梯度下降、深度神经网络、反向传播】**
 - [【深度学习理论】一文搞透梯度下降Gradient descent](https://zhuanlan.zhihu.com/p/144478956)
 - [【深度学习理论】纯公式手推+代码撸——神经网络的反向传播+梯度下降](https://zhuanlan.zhihu.com/p/145538299)
 - [【深度学习理论】一文搞透pytorch中的tensor、autograd、反向传播和计算图](https://zhuanlan.zhihu.com/p/145353262)
@@ -271,16 +271,16 @@
 - [Nvidia TensorRT下载——Nvidia高性能深度学习推理加深SDK](https://developer.nvidia.com/tensorrt)
 - [Anaconda——虚拟编程环境管理](https://www.anaconda.com/)
 
-#####标注软件
+**标注软件**
 - [【github】CasiaLabeler——支持实例分割车道线检测多边形标注等](https://github.com/wkentaro/labelme)
 - [【github】labelme——python开发的多边形标注工具](https://github.com/wkentaro/labelme)
 
-#####模型可视化
+**模型可视化**
 - [NN-SVG——在线神经网络模型画图工具](http://alexlenail.me/NN-SVG/index.html)
 - [Netron——开源神经网络模型画图工具](https://github.com/lutzroeder/netron)
 - [PlotNeuralNet——开源神经网络绘图工具](https://github.com/HarisIqbal88/PlotNeuralNet)
 
-#####性能优化和部署
+**性能优化和部署**
 - [【github】torch2trt——易于使用的PyTorch到TensorRT转换器](https://github.com/NVIDIA-AI-IOT/torch2trt)
 - [【github】ncnn——腾讯出品的针对移动平台优化的高性能神经网络推理框架](https://github.com/Tencent/ncnn)
 - [【github】onnx——跨框架机器学习互操作性的开放标准](https://github.com/onnx/onnx)
